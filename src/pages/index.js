@@ -98,7 +98,7 @@ const IndexPage = () => {
                 className="rounded-circle"
               />
             </NoelImageWrap>
-            <h1 className={["text-center", "h2"].join(" ")}>
+            <h1 className={["text-center", "h3"].join(" ")}>
               Enriching digital experiences with thoughtful design. <br />
               Hi, I'm Noel.
             </h1>

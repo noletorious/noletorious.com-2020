@@ -6,7 +6,8 @@ import Col from "react-bootstrap/Col"
 import Row from "react-bootstrap/Row"
 import Image from "gatsby-image"
 import NextContentPage from "../components/NextContentPage"
-import styled from "styled-components"
+import ProjectHeader from "../components/ProjectHeader"
+// import styled from "styled-components"
 // import HomeAnimationWebm from "../images/trimet-home-animation.webm"
 // import HomeAnimationMp4 from "../images/trimet-home-animation.mp4"
 import GoogleFlygGif from "../images/trimet-googlefly.gif"
@@ -19,17 +20,6 @@ import pocTTmp4 from "../images/poc-animations/trimet-triptools.mp4"
 import pocTTwebm from "../images/poc-animations/trimet-triptools.webm"
 import pocUAmp4 from "../images/poc-animations/trimet-useraccounts.mp4"
 import pocUAwebm from "../images/poc-animations/trimet-useraccounts.webm"
-import ColorScheme from "../components/colorScheme"
-
-const TriMetHeader = styled(Container)`
-  background-color: #084c8d;
-  padding-top: 6em;
-  padding-bottom: 6em;
-`
-const TriMetWhiteLogo = styled(Image)`
-  max-width: 200px;
-  margin-left: -10px;
-`
 
 const TriMet = () => {
   const data = useStaticQuery(graphql`
@@ -57,7 +47,7 @@ const TriMet = () => {
       }
       trimetInsta: file(relativePath: { eq: "trimet-insta.jpg" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 538, maxHeight: 389) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -71,21 +61,28 @@ const TriMet = () => {
       }
       trimetOTPPreview: file(relativePath: { eq: "trimet-otp-preview.png" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid {
             ...GatsbyImageSharpFluid
           }
         }
       }
       trimetNewTT: file(relativePath: { eq: "trimet-new-tt.png" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid {
             ...GatsbyImageSharpFluid
           }
         }
       }
       trimetOldTT: file(relativePath: { eq: "trimet-old-tt.png" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      trimetBlog: file(relativePath: { eq: "trimet-blogcomparison.png" }) {
+        childImageSharp {
+          fluid {
             ...GatsbyImageSharpFluid
           }
         }
@@ -94,60 +91,86 @@ const TriMet = () => {
   `)
   return (
     <Layout>
-      <TriMetHeader fluid>
-        <Row>
-          <Col
-            xs={{ span: 12 }}
-            sm={{ span: 6, offset: 3 }}
-            className="text-white"
-          >
-            <TriMetWhiteLogo fluid={data.trimetWhite.childImageSharp.fluid} />
-            <ColorScheme
-              c1="#084c8d"
-              c2="#d1441e"
-              c3="#f7e886"
-              c4="#6db33f"
-              c5="#d3e9ff"
-            />
-            <hr />
-            <p className="font-weight-bold">Web Designer/Developer</p>
-            <p className="small">
-              UX Design, Visual Design, Motion Graphics, Video/Content
-              Production, Animation Storytelling, React Front-end Development,
-              Photography
-            </p>
-          </Col>
-        </Row>
-      </TriMetHeader>
+      <ProjectHeader
+        logo={data.trimetWhite.childImageSharp.fluid}
+        description="UX Design, Visual Design, Motion Graphics, Video/Content Production,
+      Animation Storytelling, React Front-end Development, Photography"
+        jobTitle="Web Designer/Developer"
+        c1="#084c8d"
+        c2="#d1441e"
+        c3="#f7e886"
+        c4="#6db33f"
+        c5="#d3e9ff"
+        bg="#084c8d"
+      />
       <Container className="my-5">
         <Row>
-          {/* Insta, Flythroughs, OTP */}
-          <Col xs={{ span: 6 }}>
+          <Col xs={{ span: 12 }} sm={{ span: 8, offset: 2 }}>
             <Image
-              fluid={data.trimetInsta.childImageSharp.fluid}
+              fluid={data.trimetStyleGuide.childImageSharp.fluid}
               className="rounded"
             />
-            <p className={["small", "text-muted", "mt-2"].join(" ")}>
-              Photo I'm most proud of.{" "}
+            <p
+              className={[
+                "small",
+                "text-muted",
+                "mt-2",
+                "mb-5",
+                "text-center",
+              ].join(" ")}
+            >
+              Internal{" "}
               <a
-                href="//instagram.com/trimet"
+                href="https://xd.adobe.com/view/47f4d433-c38c-438e-4b42-0a08029d03e3-31c5/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                @trimet
+                style guides
               </a>
+              .
             </p>
           </Col>
-          <Col xs={{ span: 6 }}>
+        </Row>
+        <Row>
+          <Col>
             <Row>
-              <Col className="p-3">
+              <Col xs={{ span: 6 }}>
+                <Image
+                  fluid={data.trimetInsta.childImageSharp.fluid}
+                  className="rounded"
+                />
+                <p
+                  className={[
+                    "small",
+                    "text-muted",
+                    "mt-2",
+                    "text-center",
+                  ].join(" ")}
+                >
+                  Photo I'm most proud of.{" "}
+                  <a
+                    href="//instagram.com/trimet"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    @trimet
+                  </a>
+                </p>
+              </Col>
+              <Col xs={{ span: 6 }}>
                 <img
                   src={GoogleFlygGif}
                   alt="Working with Google Earth and AE"
                   className={["img-fluid", "rounded"].join(" ")}
                 />
                 <p
-                  className={["small", "text-muted", "mt-2", "mb-5"].join(" ")}
+                  className={[
+                    "small",
+                    "text-muted",
+                    "mt-2",
+                    "mb-5",
+                    "text-center",
+                  ].join(" ")}
                 >
                   TriMet/Google Earth{" "}
                   <a
@@ -160,27 +183,28 @@ const TriMet = () => {
                 </p>
               </Col>
             </Row>
-            <Row>
-              <Col xs={{ span: 10, offset: 1 }}>
-                <Image
-                  fluid={data.trimetStyleGuide.childImageSharp.fluid}
-                  className="rounded"
-                />
-                <p
-                  className={["small", "text-muted", "mt-2", "mb-5"].join(" ")}
-                >
-                  Created internal{" "}
-                  <a
-                    href="https://xd.adobe.com/view/47f4d433-c38c-438e-4b42-0a08029d03e3-31c5/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    style guides
-                  </a>
-                  .
-                </p>
-              </Col>
-            </Row>
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={{ span: 8, offset: 2 }} class="my-5">
+            <Image
+              fluid={data.trimetBlog.childImageSharp.fluid}
+              className="rounded-lg"
+            />
+            <p
+              className={["small", "text-muted", "mt-2", "text-center"].join(
+                " "
+              )}
+            >
+              2019 Redesign{" "}
+              <a
+                href="//blog.trimet.org"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Blog
+              </a>
+            </p>
           </Col>
         </Row>
         <Row>
@@ -210,14 +234,25 @@ const TriMet = () => {
           <Col className="my-5">
             <Row>
               {/* PDX Screens */}
-              <Col xs={{ span: 12 }} sm={{ span: 8 }}>
+              <Col xs={{ span: 9 }} sm={{ span: 8 }}>
                 <Image fluid={data.trimetPDXScreens.childImageSharp.fluid} />
               </Col>
-              <Col xs={{ span: 12 }} sm={{ span: 4 }}>
+              <Col xs={{ span: 3 }} sm={{ span: 4 }}>
                 <Image
                   fluid={data.trimetPDXResults.childImageSharp.fluid}
                   className="rounded-lg"
                 />
+                <p
+                  className={[
+                    "small",
+                    "text-muted",
+                    "text-center",
+                    "mt-2",
+                    "mb-5",
+                  ].join(" ")}
+                >
+                  Result
+                </p>
               </Col>
               <Col>
                 <p

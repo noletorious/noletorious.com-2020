@@ -106,7 +106,7 @@ const About = () => {
                 >
                   Proficiencies
                 </h2>
-                <ul>
+                <ul style={{ paddingInlineStart: "20px" }}>
                   <li>
                     <h5>Golf</h5>
                     <p className={["small", "mb-3"].join(" ")}>
