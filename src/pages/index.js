@@ -1,23 +1,158 @@
 import React from "react"
-import { Link } from "gatsby"
-
+import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
-import Image from "../components/image"
+import Img from "gatsby-image"
 import SEO from "../components/seo"
-import Button from 'react-bootstrap/Button'
+import styled from "styled-components"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faLongArrowAltDown } from "@fortawesome/free-solid-svg-icons"
+import Container from "react-bootstrap/Container"
+import Col from "react-bootstrap/Col"
+import Row from "react-bootstrap/Row"
+import Scrollchor from "react-scrollchor"
+import ReusableCard from "../components/ReuseableCard"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <Button>This a button</Button>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+const IndexPage = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      noelFront: file(relativePath: { eq: "noel.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      trimet: file(relativePath: { eq: "trimet-front.jpg" }) {
+        childImageSharp {
+          original {
+            src
+          }
+        }
+      }
+      attensa: file(relativePath: { eq: "attensa-front.png" }) {
+        childImageSharp {
+          original {
+            src
+          }
+        }
+      }
+      cascadiathreads: file(relativePath: { eq: "ct-front.png" }) {
+        childImageSharp {
+          original {
+            src
+          }
+        }
+      }
+      hop: file(relativePath: { eq: "hopreader-front.png" }) {
+        childImageSharp {
+          original {
+            src
+          }
+        }
+      }
+    }
+  `)
+
+  const NoelImageWrap = styled.div`
+    max-width: 125px;
+    width: 125px;
+    margin: 2em auto;
+  `
+
+  const trimetImage = data.trimet.childImageSharp.original.src
+  const attensaImage = data.attensa.childImageSharp.original.src
+  const cascadiaThreadsImage = data.cascadiathreads.childImageSharp.original.src
+  const hopImage = data.hop.childImageSharp.original.src
+
+  const trimet = {
+    imgSrc: trimetImage,
+    title: "TriMet",
+    link: "/trimet",
+  }
+  const attensa = {
+    imgSrc: attensaImage,
+    title: "Attensa",
+    link: "/attensa",
+  }
+  const cascadiathreads = {
+    imgSrc: cascadiaThreadsImage,
+    title: "Cascadia Threads",
+    link: "/cascadiathreads",
+  }
+  const hop = {
+    imgSrc: hopImage,
+    title: "Hop Fastpass",
+    link: "/hop",
+  }
+
+  // const theThemeState = useTheme()
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <Container>
+        <Row>
+          <Col>
+            <NoelImageWrap>
+              <Img
+                fluid={data.noelFront.childImageSharp.fluid}
+                className="rounded-circle"
+              />
+            </NoelImageWrap>
+            <h1 className={["text-center", "h2"].join(" ")}>
+              Enriching digital experiences with thoughtful design. <br />
+              Hi, I'm Noel.
+            </h1>
+            <div className={["d-block", "text-center", "my-5"].join(" ")}>
+              <Scrollchor to="#work" id="work" className="text-center">
+                <FontAwesomeIcon icon={faLongArrowAltDown} size="2x" />
+              </Scrollchor>
+            </div>
+          </Col>
+        </Row>
+        <Row>
+          <Col
+            xs={{ span: 12 }}
+            sm={{ span: 6 }}
+            md={{ span: 5, offset: 1 }}
+            className={["mb-4", "mb-sm-4", "mb-md-0"].join(" ")}
+          >
+            <ReusableCard
+              title={trimet.title}
+              imgSrc={trimet.imgSrc}
+              link={trimet.link}
+            />
+          </Col>
+          <Col xs={{ span: 12 }} sm={{ span: 6 }} md={{ span: 5 }}>
+            <ReusableCard
+              title={attensa.title}
+              imgSrc={attensa.imgSrc}
+              link={attensa.link}
+            />
+          </Col>
+        </Row>
+        <Row className="my-4">
+          <Col
+            sm={{ span: 6 }}
+            md={{ span: 5, offset: 1 }}
+            className={["mb-4", "mb-sm-4", "mb-md-0"].join(" ")}
+          >
+            <ReusableCard
+              title={cascadiathreads.title}
+              imgSrc={cascadiathreads.imgSrc}
+              link={cascadiathreads.link}
+            />
+          </Col>
+          <Col sm={{ span: 6 }} md={{ span: 5 }}>
+            <ReusableCard
+              title={hop.title}
+              imgSrc={hop.imgSrc}
+              link={hop.link}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </Layout>
+  )
+}
 
 export default IndexPage
