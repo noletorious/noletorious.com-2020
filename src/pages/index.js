@@ -113,7 +113,7 @@ const IndexPage = () => {
         </Row>
         <Row>
           <Col
-            xs={{ span: 12 }}
+            xs={{ span: 6 }}
             sm={{ span: 6 }}
             md={{ span: 5, offset: 1 }}
             className={["mb-4", "mb-sm-4", "mb-md-0"].join(" ")}
@@ -124,7 +124,7 @@ const IndexPage = () => {
               link={trimet.link}
             />
           </Col>
-          <Col xs={{ span: 12 }} sm={{ span: 6 }} md={{ span: 5 }}>
+          <Col xs={{ span: 6 }} sm={{ span: 6 }} md={{ span: 5 }}>
             <ReusableCard
               title={attensa.title}
               imgSrc={attensa.imgSrc}
@@ -132,8 +132,9 @@ const IndexPage = () => {
             />
           </Col>
         </Row>
-        <Row className="my-4">
+        <Row className="my-3">
           <Col
+            xs={{ span: 6 }}
             sm={{ span: 6 }}
             md={{ span: 5, offset: 1 }}
             className={["mb-4", "mb-sm-4", "mb-md-0"].join(" ")}
@@ -144,7 +145,7 @@ const IndexPage = () => {
               link={cascadiathreads.link}
             />
           </Col>
-          <Col sm={{ span: 6 }} md={{ span: 5 }}>
+          <Col xs={{ span: 6 }} sm={{ span: 6 }} md={{ span: 5 }}>
             <ReusableCard
               title={hop.title}
               imgSrc={hop.imgSrc}
