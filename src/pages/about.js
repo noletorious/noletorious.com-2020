@@ -13,12 +13,13 @@ const TimelineDivider = styled.div`
   width: 1px;
   height: 25px;
   margin: 0.5em 0;
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
 `
 
 const About = () => {
   const data = useStaticQuery(graphql`
     query {
-      trimet: file(relativePath: { eq: "portland-about.jpg" }) {
+      noel: file(relativePath: { eq: "noel-trimet.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -42,14 +43,15 @@ const About = () => {
               <a href="//instagram.com/trimet">@trimet</a>
             </p>
 
-            <Image fluid={data.trimet.childImageSharp.fluid} className="my-3" />
+            <Image
+              fluid={data.noel.childImageSharp.fluid}
+              className={["my-3", "rounded-lg"].join(" ")}
+            />
             <h1 className={["h3", "mt-5", "mb-3"].join(" ")}>Hello World!</h1>
             <p>
-              I am a full-stack designer currently in Portland, Oregon. I've
-              worked in various web design roles from visual design, apparel
-              design, content strategy, 2D animations, UX design, and web
-              development. Through my career I've developed interdisciplinary
-              skillsets within the realm of interaction and interface design.
+              Full-stack designer currently in Portland, Oregon. Through my
+              career I've developed interdisciplinary skillsets within the realm
+              of interaction and interface design.
             </p>
             <Row>
               <Col>
@@ -70,22 +72,22 @@ const About = () => {
                 <p className={["font-weight-bold", "small", "mb-1"].join(" ")}>
                   [2017-Present] Web Designer/Developer
                 </p>
-                <TimelineDivider className="border-left" />
+                <TimelineDivider />
                 <h3>Attensa</h3>
                 <p className={["small", "mb-1"].join(" ")}>
                   [2014-2017] Visual/UI Designer
                 </p>
-                <TimelineDivider className="border-left" />
+                <TimelineDivider />
                 <h3>AboutUs</h3>
                 <p className={["small", "mb-1"].join(" ")}>
                   [2012-2014] Web Designer
                 </p>
-                <TimelineDivider className="border-left" />
+                <TimelineDivider />
                 <h3>Passport2 Network</h3>
                 <p className={["small", "mb-1"].join(" ")}>
                   [2010-2011] Jr. Web Designer
                 </p>
-                <TimelineDivider className="border-left" />
+                <TimelineDivider />
                 <h3>Southern Oregon University</h3>
                 <p className={["small", "mb-1"].join(" ")}>
                   [2007-2011] Computer Science

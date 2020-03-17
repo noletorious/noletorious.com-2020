@@ -149,7 +149,7 @@ const TriMet = () => {
                 >
                   Photo I'm most proud of.{" "}
                   <a
-                    href="//instagram.com/trimet"
+                    href="https://www.instagram.com/p/ByS8gYEB-bT/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -186,7 +186,7 @@ const TriMet = () => {
           </Col>
         </Row>
         <Row>
-          <Col xs={{ span: 8, offset: 2 }} class="my-5">
+          <Col xs={{ span: 10, offset: 1 }} class="my-5">
             <Image
               fluid={data.trimetBlog.childImageSharp.fluid}
               className="rounded-lg"
@@ -208,7 +208,11 @@ const TriMet = () => {
           </Col>
         </Row>
         <Row>
-          <Col xs={{ span: 6, offset: 3 }} className="my-5">
+          <Col
+            xs={{ span: 10, offset: 1 }}
+            sm={{ span: 6, offset: 3 }}
+            className="my-5"
+          >
             <Image fluid={data.trimetOTPPreview.childImageSharp.fluid} />
             <p
               className={[

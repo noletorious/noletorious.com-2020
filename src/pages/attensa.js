@@ -8,6 +8,13 @@ import Image from "gatsby-image"
 import ProjectHeader from "../components/ProjectHeader"
 import attensaLogoGif from "../images/attensa-animation.gif"
 import NextContentPage from "../components/NextContentPage"
+import styled from "styled-components"
+
+const SiloDivider = styled.div`
+  height: 1px;
+  width: 100%;
+  border: dashed 0.5px rgba(255, 255, 255, 0.25);
+`
 
 const Attensa = () => {
   const data = useStaticQuery(graphql`
@@ -104,6 +111,7 @@ const Attensa = () => {
       }
     }
   `)
+
   return (
     <Layout>
       <ProjectHeader
@@ -123,6 +131,7 @@ const Attensa = () => {
             <Col xs={{ span: 12 }} sm={{ span: 8, offset: 2 }}>
               {/* <Image fluid={data.attensaShoulder.childImageSharp.fluid} /> */}
               <Image fluid={data.attensaSilos.childImageSharp.fluid} />
+              <SiloDivider />
               <Image fluid={data.attensaSolOne.childImageSharp.fluid} />
             </Col>
           </Row>
@@ -157,25 +166,15 @@ const Attensa = () => {
           </Col>
         </Row>
       </Container>
-      <Container style={{ marginTop: "-15em" }} fluid>
-        <Row>
-          <Col>
-            <Image
-              fluid={data.attensaShoulder.childImageSharp.fluid}
-              className={["rounded-lg", "mb-3", "border"].join(" ")}
-            />
-          </Col>
-        </Row>
-      </Container>
       <Container>
         <Row className="my-5 py-5">
-          <Col xs={{ span: 6 }} sm={{ span: 3 }}>
+          <Col xs={{ span: 6 }} sm={{ span: 3 }} className="mb-3">
             <Image
               fluid={data.attensaMobLogin.childImageSharp.fluid}
               className={["rounded-lg", "border"].join(" ")}
             />
           </Col>
-          <Col xs={{ span: 6 }} sm={{ span: 3 }}>
+          <Col xs={{ span: 6 }} sm={{ span: 3 }} className="mb-3">
             <Image
               fluid={data.attensaMobMyTopics.childImageSharp.fluid}
               className={["rounded-lg", "border"].join(" ")}
@@ -198,7 +197,20 @@ const Attensa = () => {
       <Container fluid>
         <Row>
           <Col xs={{ span: 12 }}>
-            <Image fluid={data.attensaSketch.childImageSharp.fluid} />
+            <Image
+              fluid={data.attensaSketch.childImageSharp.fluid}
+              className={["rounded-top"].join(" ")}
+            />
+          </Col>
+        </Row>
+      </Container>
+      <Container fluid>
+        <Row>
+          <Col>
+            <Image
+              fluid={data.attensaShoulder.childImageSharp.fluid}
+              className={["mb-3", "rounded-bottom"].join(" ")}
+            />
           </Col>
         </Row>
       </Container>
@@ -220,6 +232,7 @@ const Attensa = () => {
           </Col>
         </Row>
       </Container>
+
       <NextContentPage
         title="Cascadia threads"
         otherProject="/cascadiathreads"

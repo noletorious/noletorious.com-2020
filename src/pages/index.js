@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import Img from "gatsby-image"
 import SEO from "../components/seo"
@@ -15,7 +15,7 @@ import ReusableCard from "../components/ReuseableCard"
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      noelFront: file(relativePath: { eq: "noel.jpg" }) {
+      noelFront: file(relativePath: { eq: "noel-trimet-square.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -93,10 +93,12 @@ const IndexPage = () => {
         <Row>
           <Col>
             <NoelImageWrap>
-              <Img
-                fluid={data.noelFront.childImageSharp.fluid}
-                className="rounded-circle"
-              />
+              <Link to="/about">
+                <Img
+                  fluid={data.noelFront.childImageSharp.fluid}
+                  className="rounded-circle"
+                />
+              </Link>
             </NoelImageWrap>
             <h1 className={["text-center", "h3"].join(" ")}>
               Enriching digital experiences with thoughtful design. <br />
