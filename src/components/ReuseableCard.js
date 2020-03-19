@@ -6,23 +6,23 @@ import { Link } from "gatsby"
 const StyledCard = styled(Card)`
   border: none;
   background-color: transparent;
-  border-bottom-right-radius: calc(1rem - 1px);
-  border-bottom-left-radius: calc(1rem - 1px);
-  border-top-right-radius: calc(1rem - 1px);
-  border-top-left-radius: calc(1rem - 1px);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.35);
+  border-bottom-right-radius: calc(0.8rem - 1px);
+  border-bottom-left-radius: calc(0.8rem - 1px);
+  border-top-right-radius: calc(0.8rem - 1px);
+  border-top-left-radius: calc(0.8rem - 1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   transition: box-shadow 0.3s ease;
   &:hover {
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
     transition: box-shadow 0.3s ease;
     cursor: pointer;
   }
 `
 const StyledCardImage = styled(Card.Img)`
-  border-bottom-right-radius: calc(1rem - 1px);
-  border-bottom-left-radius: calc(1rem - 1px);
-  border-top-right-radius: calc(1rem - 1px);
-  border-top-left-radius: calc(1rem - 1px);
+  border-bottom-right-radius: calc(0.8rem - 1px);
+  border-bottom-left-radius: calc(0.8rem - 1px);
+  border-top-right-radius: calc(0.8rem - 1px);
+  border-top-left-radius: calc(0.8rem - 1px);
 `
 
 const ResuableCard = ({ imgSrc, title, link }) => {

@@ -115,7 +115,7 @@ const Attensa = () => {
   return (
     <Layout>
       <ProjectHeader
-        jobTitle="UI Visual Designer"
+        jobTitle="UI/Visual Designer"
         description="Product Design, UX/I Design, Visual Design, Branding, Infographics, and Content Marketing"
         logo={data.attensaLogo.childImageSharp.fluid}
         c1="#fff"
@@ -234,7 +234,7 @@ const Attensa = () => {
       </Container>
 
       <NextContentPage
-        title="Cascadia threads"
+        title="Cascadia Threads"
         otherProject="/cascadiathreads"
       />
     </Layout>

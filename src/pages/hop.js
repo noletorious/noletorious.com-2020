@@ -8,10 +8,13 @@ import ProjectHeader from "../components/ProjectHeader"
 import NextContentPage from "../components/NextContentPage"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
+import hopPlaidPantryWebm from "../images/hop-plaidpantry.webm"
+import hopPlaidPantryMp4 from "../images/hop-plaidpantry.mp4"
+import hop30secadWebm from "../images/hop-30secad.webm"
+import hop30secadMp4 from "../images/hop-30secad.mp4"
 import whatsMyFareMp4 from "../images/hop-whatsmyfare.mp4"
 import hopGoogleVCGif from "../images/hop-googleVC.gif"
 import hopLogoGif from "../images/hop-animation.gif"
-import hopWhereTo from "../images/hop-wheretoget.gif"
 
 const Hop = () => {
   function captionText() {
@@ -71,11 +74,12 @@ const Hop = () => {
       />
       <Container>
         <Row>
-          <Col>
+          <Col className="my-5">
             <Image
               fluid={data.hopTap.childImageSharp.fluid}
-              className={["my-5", "rounded-lg"].join(" ")}
+              className={["rounded-lg"].join(" ")}
             />
+            <p className={captionText()}>Unofficial go-to hand model.</p>
           </Col>
         </Row>
         <Row>
@@ -85,7 +89,7 @@ const Hop = () => {
               className="rounded-lg"
             />
             <p className={captionText()}>
-              Problem: Not sure what fare type to use
+              Common Problem: Users were unsure on what fare type to use.
             </p>
           </Col>
           <Col xs={{ span: 6 }}>
@@ -103,14 +107,15 @@ const Hop = () => {
             </video>
             <p className={captionText()}>
               <em>
-                Result:{" "}
+                Solution:{" "}
                 <a
                   href="https://trimet.org/waystopay/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Short and friendly questionnare
-                </a>{" "}
+                  Create a short and friendly questionnare
+                </a>
+                .
               </em>
             </p>
           </Col>
@@ -122,13 +127,13 @@ const Hop = () => {
               className={["mt-5", "rounded-lg"].join(" ")}
             />
             <p className={captionText()}>
-              Collaborated with Apple's Marketing promoting{" "}
+              Collaborated directly with Apple's Marketing team promoting{" "}
               <a
                 href="https://trimet.org/applepay/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Virtual Card on iOS
+                Virtual Card + ApplePay
               </a>{" "}
               and{" "}
               <a
@@ -143,7 +148,7 @@ const Hop = () => {
           </Col>
         </Row>
         <Row>
-          <Col xs={{ span: 12 }} sm={{ span: 8, offset: 2 }}>
+          <Col className="py-5" xs={{ span: 12 }} sm={{ span: 8, offset: 2 }}>
             <Image
               fluid={data.hopWebsite.childImageSharp.fluid}
               className="rounded-lg"
@@ -157,6 +162,7 @@ const Hop = () => {
               >
                 myhopcard.com
               </a>
+              .
             </p>
           </Col>
         </Row>
@@ -166,14 +172,49 @@ const Hop = () => {
       </Container>
       <Container>
         <Row>
-          <Col sm={{ span: 8, offset: 2 }}>
-            <img
-              src={hopWhereTo}
-              alt="Fun Animations"
-              className={["img-fluid", "py-4", "rounded-lg"].join(" ")}
-            />
-            <p className={captionText()}>Fun Animation Series</p>
+          <Col sm={{ span: 6 }}>
+            <video
+              loop
+              muted
+              autoPlay
+              className={["w-100", "d-block", "rounded-lg"].join(" ")}
+            >
+              <source src={hopPlaidPantryMp4} type="video/mp4" />
+              <source src={hopPlaidPantryWebm} type="video/webm" />
+              <span className="text-light">
+                Your browser does not support HTML5 video.
+              </span>
+            </video>
+            <p className={captionText()}>
+              Create fun animations for marketing campaigns.
+            </p>
           </Col>
+          <Col sm={{ span: 6 }}>
+            <video
+              loop
+              muted
+              autoPlay
+              className={["w-100", "d-block", "rounded-lg"].join(" ")}
+            >
+              <source src={hop30secadMp4} type="video/mp4" />
+              <source src={hop30secadWebm} type="video/webm" />
+              <span className="text-light">
+                Your browser does not support HTML5 video.
+              </span>
+            </video>
+            <p className={captionText()}>
+              Created the{" "}
+              <a
+                href="https://youtu.be/K0rsCD-jTBk"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Hop Fastpass launch animation
+              </a>{" "}
+              ads.
+            </p>
+          </Col>
+          <Col sm={{ span: 12 }} className="mb-5"></Col>
         </Row>
       </Container>
       <Container style={{ backgroundColor: "#0f0f0f" }} fluid>
@@ -181,14 +222,17 @@ const Hop = () => {
           <Col
             xs={{ span: 4, offset: 4 }}
             sm={{ span: 2, offset: 5 }}
-            className="my-4"
+            className="mt-4"
           >
             <img
               src={hopGoogleVCGif}
               alt="Virtual Card Animation Validator"
               className={["img-fluid", "mt-4"].join(" ")}
             />
+          </Col>
+          <Col xs={{ span: 12 }} className="mb-4">
             <p className={captionText()}>
+              Animated Hopster{" "}
               <a
                 href="https://myhopcard.com/home/pay-with-your-phone"
                 target="_blank"
@@ -196,7 +240,7 @@ const Hop = () => {
               >
                 Virtual Card
               </a>{" "}
-              Animation Validator
+              Validator
             </p>
           </Col>
         </Row>

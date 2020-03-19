@@ -112,40 +112,28 @@ const IndexPage = () => {
           </Col>
         </Row>
         <Row>
-          <Col
-            xs={{ span: 6 }}
-            sm={{ span: 6 }}
-            md={{ span: 5, offset: 1 }}
-            className={["mb-4", "mb-sm-4", "mb-md-0"].join(" ")}
-          >
+          <Col xs={{ span: 6 }} md={{ span: 3 }} className="mb-4">
             <ReusableCard
               title={trimet.title}
               imgSrc={trimet.imgSrc}
               link={trimet.link}
             />
           </Col>
-          <Col xs={{ span: 6 }} sm={{ span: 6 }} md={{ span: 5 }}>
+          <Col xs={{ span: 6 }} md={{ span: 3 }}>
             <ReusableCard
               title={attensa.title}
               imgSrc={attensa.imgSrc}
               link={attensa.link}
             />
           </Col>
-        </Row>
-        <Row className="my-3">
-          <Col
-            xs={{ span: 6 }}
-            sm={{ span: 6 }}
-            md={{ span: 5, offset: 1 }}
-            className={["mb-4", "mb-sm-4", "mb-md-0"].join(" ")}
-          >
+          <Col xs={{ span: 6 }} md={{ span: 3 }}>
             <ReusableCard
               title={cascadiathreads.title}
               imgSrc={cascadiathreads.imgSrc}
               link={cascadiathreads.link}
             />
           </Col>
-          <Col xs={{ span: 6 }} sm={{ span: 6 }} md={{ span: 5 }}>
+          <Col xs={{ span: 6 }} md={{ span: 3 }}>
             <ReusableCard
               title={hop.title}
               imgSrc={hop.imgSrc}
