@@ -71,9 +71,10 @@ const About = () => {
             />
             <h1 className={["h3", "mt-5", "mb-3"].join(" ")}>Hello World!</h1>
             <p>
-              Full-stack designer currently in Portland, Oregon. Through my
-              career I've developed interdisciplinary skillsets within the realm
-              of interaction and interface design.
+              Full-stack designer originally from Kauai, Hawaii currently in
+              Portland, Oregon. Through my career I've developed
+              interdisciplinary skillsets within the realm of interaction and
+              interface design.
             </p>
             <Row>
               <Col>
@@ -91,7 +92,7 @@ const About = () => {
                   Experience
                 </h2>
                 {jobs.map(job => (
-                  <div>
+                  <div key={job.employer}>
                     <span className={["text-muted", "small"].join(" ")}>
                       {job.date}
                     </span>{" "}

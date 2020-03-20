@@ -8,12 +8,13 @@ import useDarkMode from "use-dark-mode"
 import DarkModeToggle from "./DarkModeToggle"
 import styled from "styled-components"
 import ScrollChor from "react-scrollchor"
+import { Location } from "@reach/router"
 
 const TheNavBarBrand = styled(Navbar.Brand)`
   margin-right: 0;
 `
 
-const TheNavBar = ({ isIndex }) => {
+const TheNavBar = () => {
   const darkMode = useDarkMode(false)
   const imgData = useStaticQuery(graphql`
     query {
@@ -38,19 +39,27 @@ const TheNavBar = ({ isIndex }) => {
     >
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="ml-auto">
-          <Nav.Link href="/about" eventKey={1}>
+          <Nav.Link href="/about" eventkey={1}>
             About
           </Nav.Link>
-          <Nav.Item eventKey={2}>
-            {isIndex ? (
-              <ScrollChor className="nav-link" to="#work">
-                Work
-              </ScrollChor>
-            ) : (
-              <Link className="nav-link" to="/#work">
-                Work
-              </Link>
-            )}
+          <Nav.Item eventkey={2}>
+            <Location>
+              {({ location }) => {
+                if (location.pathname === "/") {
+                  return (
+                    <ScrollChor className="nav-link" to="#work">
+                      Work
+                    </ScrollChor>
+                  )
+                } else {
+                  return (
+                    <Link className="nav-link" to="/#work">
+                      Work
+                    </Link>
+                  )
+                }
+              }}
+            </Location>
           </Nav.Item>
         </Nav>
       </Navbar.Collapse>
@@ -65,7 +74,7 @@ const TheNavBar = ({ isIndex }) => {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Item eventKey={3} className="nav-link">
+          <Nav.Item eventkey={3} className="nav-link">
             <DarkModeToggle />
           </Nav.Item>
         </Nav>

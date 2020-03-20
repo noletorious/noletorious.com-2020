@@ -120,17 +120,17 @@ const IndexPage = () => {
   const trimetArrivals = {
     imgSrc: trimetArrivalsImage,
     title: "TriMet Arrivals",
-    link: "/#",
+    link: "#",
   }
   const heyyy = {
     imgSrc: heyyyImage,
     title: "Heyyy App Concept",
-    link: "/#",
+    link: "#",
   }
   const googleMapsRedesign = {
     imgSrc: gMapsRedesignImage,
     title: "Google Maps Redesign",
-    link: "/#",
+    link: "#",
   }
 
   function captionText() {
@@ -199,7 +199,7 @@ const IndexPage = () => {
             <DividerDashed />
           </Col>
         </Row>
-        <Row className="justify-content-md-center">
+        <Row className={["justify-content-md-center", "mb-5"].join(" ")}>
           <Col xs={{ span: 6 }} md={{ span: 3 }} className={["mb-4"].join(" ")}>
             <ReusableCard imgSrc={heyyy.imgSrc} link={heyyy.link} />
             <p className={captionText()}>Coming soon</p>
@@ -214,7 +214,7 @@ const IndexPage = () => {
           <Col xs={{ span: 6 }} md={{ span: 3 }}>
             <ReusableCard
               imgSrc={googleMapsRedesign.imgSrc}
-              link={googleMapsRedesign.link}
+              link={trimetArrivals.link}
             />
             <p className={captionText()}>Coming soon</p>
           </Col>
