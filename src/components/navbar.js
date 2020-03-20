@@ -7,12 +7,13 @@ import Nav from "react-bootstrap/Nav"
 import useDarkMode from "use-dark-mode"
 import DarkModeToggle from "./DarkModeToggle"
 import styled from "styled-components"
+import ScrollChor from "react-scrollchor"
 
 const TheNavBarBrand = styled(Navbar.Brand)`
   margin-right: 0;
 `
 
-const TheNavBar = () => {
+const TheNavBar = ({ isIndex }) => {
   const darkMode = useDarkMode(false)
   const imgData = useStaticQuery(graphql`
     query {
@@ -41,9 +42,15 @@ const TheNavBar = () => {
             About
           </Nav.Link>
           <Nav.Item eventKey={2}>
-            <Link className="nav-link" to="/#work">
-              Work
-            </Link>
+            {isIndex ? (
+              <ScrollChor className="nav-link" to="#work">
+                Work
+              </ScrollChor>
+            ) : (
+              <Link className="nav-link" to="/#work">
+                Work
+              </Link>
+            )}
           </Nav.Item>
         </Nav>
       </Navbar.Collapse>

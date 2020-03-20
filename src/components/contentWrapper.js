@@ -5,7 +5,7 @@ import Footer from "./footer"
 const contentWrapper = ({ children }) => {
   return (
     <div className="content">
-      <Navbar />
+      <Navbar isIndex={window.location.pathname === "/" ? true : false} />
       <main>{children}</main>
       <Footer />
     </div>
