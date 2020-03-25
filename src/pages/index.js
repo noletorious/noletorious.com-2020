@@ -200,10 +200,10 @@ const IndexPage = () => {
           </Col>
         </Row>
         <Row className={["justify-content-md-center", "mb-5"].join(" ")}>
-          <Col xs={{ span: 6 }} md={{ span: 3 }} className={["mb-4"].join(" ")}>
+          {/* <Col xs={{ span: 6 }} md={{ span: 3 }} className={["mb-4"].join(" ")}>
             <ReusableCard imgSrc={heyyy.imgSrc} link={heyyy.link} />
             <p className={captionText()}>Coming soon</p>
-          </Col>
+          </Col> */}
           <Col xs={{ span: 6 }} md={{ span: 3 }}>
             <ReusableCard
               imgSrc={trimetArrivals.imgSrc}
@@ -214,7 +214,7 @@ const IndexPage = () => {
           <Col xs={{ span: 6 }} md={{ span: 3 }}>
             <ReusableCard
               imgSrc={googleMapsRedesign.imgSrc}
-              link={trimetArrivals.link}
+              link={googleMapsRedesign.link}
             />
             <p className={captionText()}>Coming soon</p>
           </Col>

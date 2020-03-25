@@ -130,7 +130,7 @@ const About = () => {
                   <li>
                     <h5>Development</h5>
                     <p className={["small", "mb-3", "text-muted"].join(" ")}>
-                      Reactjs, VSCode, Android Studio, learning Flutter
+                      Git, Reactjs, VSCode, Android Studio, learning Flutter
                     </p>
                   </li>
                   <li>

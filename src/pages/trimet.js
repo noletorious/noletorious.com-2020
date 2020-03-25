@@ -121,7 +121,7 @@ const TriMet = () => {
             >
               Internal{" "}
               <a
-                href="https://xd.adobe.com/view/47f4d433-c38c-438e-4b42-0a08029d03e3-31c5/"
+                href="https://xd.adobe.com/view/33453830-a9e6-4122-6b2c-1d0cc6704427-4574/grid"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -268,7 +268,8 @@ const TriMet = () => {
                     "mb-5",
                   ].join(" ")}
                 >
-                  Collaborated with the Port of Portland / MAX Arrival Screens
+                  Collaborated with the Port of Portland / Designed and
+                  developed MAX Arrival Screens
                 </p>
               </Col>
             </Row>
