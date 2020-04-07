@@ -11,7 +11,7 @@ import styled from "styled-components"
 import useDarkMode from "use-dark-mode"
 
 const About = () => {
-  const darkMode = useDarkMode(true)
+  const darkMode = useDarkMode()
   const TimelineDivider = styled.div`
     width: 1px;
     height: 25px;
@@ -97,7 +97,7 @@ const About = () => {
                       {job.date}
                     </span>{" "}
                     <h3 className="mb-0">{job.employer}</h3>
-                    <p className={["font-weight-bold", "mb-1"].join(" ")}>
+                    <p className={["mb-1", "text-muted"].join(" ")}>
                       {job.position}
                     </p>
                     {job.employer === "Southern Oregon University" ? null : (

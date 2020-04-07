@@ -11,6 +11,7 @@ import Col from "react-bootstrap/Col"
 import Row from "react-bootstrap/Row"
 import Scrollchor from "react-scrollchor"
 import ReusableCard from "../components/ReuseableCard"
+import ReusableCardNoLink from "../components/ReuseableCardNoLink"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -94,7 +95,7 @@ const IndexPage = () => {
   const hopImage = data.hop.childImageSharp.original.src
 
   const trimetArrivalsImage = data.trimetArrivals.childImageSharp.original.src
-  const heyyyImage = data.heyyy.childImageSharp.original.src
+  // const heyyyImage = data.heyyy.childImageSharp.original.src
   const gMapsRedesignImage = data.gMapsRedesign.childImageSharp.original.src
 
   const trimet = {
@@ -122,15 +123,14 @@ const IndexPage = () => {
     title: "TriMet Arrivals",
     link: "#",
   }
-  const heyyy = {
-    imgSrc: heyyyImage,
-    title: "Heyyy App Concept",
-    link: "#",
-  }
+  // const heyyy = {
+  //   imgSrc: heyyyImage,
+  //   title: "Heyyy App Concept",
+  //   link: "#",
+  // }
   const googleMapsRedesign = {
     imgSrc: gMapsRedesignImage,
     title: "Google Maps Redesign",
-    link: "#",
   }
 
   function captionText() {
@@ -153,10 +153,15 @@ const IndexPage = () => {
                 />
               </Link>
             </NoelImageWrap>
-            <h1 className={["text-center", "h3"].join(" ")}>
-              Enriching digital experiences with thoughtful design. <br />
-              Hi, I'm Noel.
-            </h1>
+            <p className={["text-center", "h3"].join(" ")}>
+              <span role="img" aria-label="Waive">
+                👋
+              </span>
+            </p>
+            <h1 className={["text-center", "h4"].join(" ")}>Hi, I'm Noel.</h1>
+            <p className={["text-muted", "mt-2", "text-center"].join(" ")}>
+              Product / Interaction / Motion Designer
+            </p>
             <div className={["d-block", "text-center", "my-5"].join(" ")}>
               <Scrollchor to="#work" id="work" className="text-center">
                 <FontAwesomeIcon icon={faLongArrowAltDown} size="2x" />
@@ -205,17 +210,11 @@ const IndexPage = () => {
             <p className={captionText()}>Coming soon</p>
           </Col> */}
           <Col xs={{ span: 6 }} md={{ span: 3 }}>
-            <ReusableCard
-              imgSrc={trimetArrivals.imgSrc}
-              link={trimetArrivals.link}
-            />
+            <ReusableCardNoLink imgSrc={trimetArrivals.imgSrc} />
             <p className={captionText()}>Coming soon</p>
           </Col>
           <Col xs={{ span: 6 }} md={{ span: 3 }}>
-            <ReusableCard
-              imgSrc={googleMapsRedesign.imgSrc}
-              link={googleMapsRedesign.link}
-            />
+            <ReusableCardNoLink imgSrc={googleMapsRedesign.imgSrc} />
             <p className={captionText()}>Coming soon</p>
           </Col>
         </Row>

@@ -196,18 +196,18 @@ const TriMet = () => {
                 " "
               )}
             >
-              2019 Redesign{" "}
+              2019{" "}
               <a
                 href="//blog.trimet.org"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Blog
+                Blog Redesign
               </a>
             </p>
           </Col>
         </Row>
-        <Row>
+        <Row className="mt-5">
           <Col
             xs={{ span: 10, offset: 1 }}
             sm={{ span: 6, offset: 3 }}
