@@ -30,11 +30,12 @@ const Footer = () => {
 
   const listGroupItemStyle = {
     backgroundColor: "transparent",
+    borderColor: "#6c757d",
   }
 
   return (
     <footer>
-      <Container>
+      <Container className="pt-3">
         <Row
           className={[
             "d-flex",
@@ -94,7 +95,7 @@ const Footer = () => {
                 "justify-content-center",
               ].join(" ")}
             >
-              <p className={["mb-0"].join(" ")}>
+              <p className={["mb-0", "text-muted"].join(" ")}>
                 Get in touch? <a href="mailto:hello@noletorious.com">Email</a>{" "}
                 is a quick way.
               </p>
@@ -108,11 +109,11 @@ const Footer = () => {
                 "justify-content-center",
               ].join(" ")}
             >
-              <h6 className={["mb-0", "text-mute"].join(" ")}>
+              <p className={["mb-0", "text-muted"].join(" ")}>
                 {data
                   ? data.name + ", OR " + Math.round(data.main.temp) + "°F"
                   : "Loading weather data..."}
-              </h6>
+              </p>
               <img
                 src={
                   data
@@ -122,7 +123,8 @@ const Footer = () => {
                     : null
                 }
                 alt="weather icon"
-                style={{ width: "30px", marginBottom: "0" }}
+                style={{ width: "30px" }}
+                className={["mb-0", "ml-1"].join(" ")}
               />
             </div>
           </Col>

@@ -11,7 +11,6 @@ import Col from "react-bootstrap/Col"
 import Row from "react-bootstrap/Row"
 import Scrollchor from "react-scrollchor"
 import ReusableCard from "../components/ReuseableCard"
-import ReusableCardNoLink from "../components/ReuseableCardNoLink"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -84,19 +83,11 @@ const IndexPage = () => {
     width: 125px;
     margin: 2em auto;
   `
-  const DividerDashed = styled.div`
-    border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
-    margin: 1em 0 2em;
-  `
 
   const trimetImage = data.trimet.childImageSharp.original.src
   const attensaImage = data.attensa.childImageSharp.original.src
   const cascadiaThreadsImage = data.cascadiathreads.childImageSharp.original.src
   const hopImage = data.hop.childImageSharp.original.src
-
-  const trimetArrivalsImage = data.trimetArrivals.childImageSharp.original.src
-  // const heyyyImage = data.heyyy.childImageSharp.original.src
-  const gMapsRedesignImage = data.gMapsRedesign.childImageSharp.original.src
 
   const trimet = {
     imgSrc: trimetImage,
@@ -117,25 +108,6 @@ const IndexPage = () => {
     imgSrc: hopImage,
     title: "Hop Fastpass",
     link: "/hop",
-  }
-  const trimetArrivals = {
-    imgSrc: trimetArrivalsImage,
-    title: "TriMet Arrivals",
-    link: "#",
-  }
-  // const heyyy = {
-  //   imgSrc: heyyyImage,
-  //   title: "Heyyy App Concept",
-  //   link: "#",
-  // }
-  const googleMapsRedesign = {
-    imgSrc: gMapsRedesignImage,
-    title: "Google Maps Redesign",
-  }
-
-  function captionText() {
-    const classNames = ["small", "text-muted", "text-center", "my-4"].join(" ")
-    return classNames
   }
 
   // const theThemeState = useTheme()
@@ -197,25 +169,6 @@ const IndexPage = () => {
               imgSrc={hop.imgSrc}
               link={hop.link}
             />
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <DividerDashed />
-          </Col>
-        </Row>
-        <Row className={["justify-content-md-center", "mb-5"].join(" ")}>
-          {/* <Col xs={{ span: 6 }} md={{ span: 3 }} className={["mb-4"].join(" ")}>
-            <ReusableCard imgSrc={heyyy.imgSrc} link={heyyy.link} />
-            <p className={captionText()}>Coming soon</p>
-          </Col> */}
-          <Col xs={{ span: 6 }} md={{ span: 3 }}>
-            <ReusableCardNoLink imgSrc={trimetArrivals.imgSrc} />
-            <p className={captionText()}>Coming soon</p>
-          </Col>
-          <Col xs={{ span: 6 }} md={{ span: 3 }}>
-            <ReusableCardNoLink imgSrc={googleMapsRedesign.imgSrc} />
-            <p className={captionText()}>Coming soon</p>
           </Col>
         </Row>
       </Container>
