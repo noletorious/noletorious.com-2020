@@ -8,6 +8,7 @@ import {
   faLinkedin,
   faGithub,
 } from "@fortawesome/free-brands-svg-icons"
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import axios from "axios"
 
 const Footer = () => {
@@ -42,14 +43,14 @@ const Footer = () => {
             "align-items-center",
             "justify-content-center",
           ].join(" ")}
-          style={{ height: "200px" }}
         >
-          <Col xs={{ span: 12 }} sm={{ span: 4 }}>
+          <Col xs={{ span: 12 }}>
             <div
               className={[
                 "d-flex",
                 "align-items-center",
                 "justify-content-center",
+                "pt-5",
               ].join(" ")}
             >
               <ul
@@ -84,29 +85,26 @@ const Footer = () => {
                     <FontAwesomeIcon icon={faLinkedin} size="lg" />
                   </a>
                 </li>
+                <li
+                  className={["list-group-item"].join(" ")}
+                  style={listGroupItemStyle}
+                >
+                  <a href="mailto:hello@noletorious.com">
+                    <FontAwesomeIcon icon={faEnvelope} size="lg" />
+                  </a>
+                </li>
               </ul>
             </div>
           </Col>
-          <Col xs={{ span: 12 }} sm={{ span: 4 }}>
+
+          <Col xs={{ span: 12 }}>
             <div
               className={[
                 "d-flex",
                 "align-items-center",
                 "justify-content-center",
-              ].join(" ")}
-            >
-              <p className={["mb-0", "text-muted"].join(" ")}>
-                Get in touch? <a href="mailto:hello@noletorious.com">Email</a>{" "}
-                is a quick way.
-              </p>
-            </div>
-          </Col>
-          <Col xs={{ span: 12 }} sm={{ span: 4 }}>
-            <div
-              className={[
-                "d-flex",
-                "align-items-center",
-                "justify-content-center",
+                "pt-4",
+                "pb-5",
               ].join(" ")}
             >
               <p className={["mb-0", "text-muted"].join(" ")}>

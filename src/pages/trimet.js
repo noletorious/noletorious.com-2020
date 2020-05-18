@@ -95,6 +95,7 @@ const TriMet = () => {
         logo={data.trimetWhite.childImageSharp.fluid}
         description="UX Design, Visual Design, Motion Graphics, Video/Content Production,
       Animation Storytelling, React Front-end Development, Photography"
+        impact="As TriMet's web designer and developer, I've taken on many roles but have been fortunate enough to choose my own specialty. Throughout the 3+ years with TriMet I have collaborated with internal departments on countless campaigns as well as participated in many partnerships with other agencies. To summarize my daily contributions: I provide or implement design solutions, feedback and or guidance—which is directly affects the rider's experience."
         jobTitle="Web Designer/Developer"
         c1="#084c8d"
         c2="#d1441e"
@@ -119,13 +120,13 @@ const TriMet = () => {
                 "text-center",
               ].join(" ")}
             >
-              Internal{" "}
+              Organized{" "}
               <a
                 href="https://xd.adobe.com/view/33453830-a9e6-4122-6b2c-1d0cc6704427-4574/grid"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                style guides
+                TriMet's design system
               </a>
               .
             </p>
@@ -147,14 +148,23 @@ const TriMet = () => {
                     "text-center",
                   ].join(" ")}
                 >
-                  Photo I'm most proud of.{" "}
+                  Sometimes I take photos for{" "}
                   <a
-                    href="https://www.instagram.com/p/ByS8gYEB-bT/"
+                    href="https://www.instagram.com/trimet"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     @trimet
                   </a>
+                  . This is the{" "}
+                  <a
+                    href="https://www.instagram.com/p/ByS8gYEB-bT/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    photo
+                  </a>{" "}
+                  I'm most proud of.
                 </p>
               </Col>
               <Col xs={{ span: 6 }}>
@@ -172,14 +182,15 @@ const TriMet = () => {
                     "text-center",
                   ].join(" ")}
                 >
-                  TriMet/Google Earth{" "}
+                  Showcasing new routes, I created TriMet/Google Earth{" "}
                   <a
                     target="_blank"
                     href="https://www.youtube.com/watch?v=BO72XAPARzM&list=PLtJW_Q-z9fw8Q2b5tdBReibFKAVfOJEy6"
                     rel="noopener noreferrer"
                   >
-                    Flythroughs
+                    flythroughs
                   </a>
+                  .
                 </p>
               </Col>
             </Row>
@@ -196,14 +207,15 @@ const TriMet = () => {
                 " "
               )}
             >
-              2019{" "}
+              Redesigned the{" "}
               <a
                 href="//blog.trimet.org"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Blog Redesign
-              </a>
+                TriMet blog
+              </a>{" "}
+              in 2019.
             </p>
           </Col>
         </Row>
@@ -215,22 +227,26 @@ const TriMet = () => {
           >
             <Image fluid={data.trimetOTPPreview.childImageSharp.fluid} />
             <p
-              className={[
-                "small",
-                "text-muted",
-                "text-center",
-                "mt-2",
-                "mb-5",
-              ].join(" ")}
+              className={["small", "text-muted", "text-center", "mt-2"].join(
+                " "
+              )}
             >
-              Front-end Developer for{" "}
+              Currently a Designer + Front-end Developer for{" "}
               <a
                 href="https://trimet.org/newplanner/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                TriMet.org Redesign
+                TriMet.org Re-architecture
               </a>
+              .
+            </p>
+            <p
+              className={["alert", "alert-primary", "small", "mb-5"].join(" ")}
+            >
+              With <strong>8 million page views per month</strong>, this is
+              project has a very high impact on TriMet as an agency as well as
+              transit riders in Portland.
             </p>
           </Col>
         </Row>
@@ -268,8 +284,15 @@ const TriMet = () => {
                     "mb-5",
                   ].join(" ")}
                 >
-                  Collaborated with the Port of Portland / Designed and
-                  developed MAX Arrival Screens
+                  Collaborated with the{" "}
+                  <a
+                    href="https://www.portofportland.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Port of Portland
+                  </a>{" "}
+                  and designed/developed the MAX Arrival Screens at PDX.
                 </p>
               </Col>
             </Row>
@@ -304,7 +327,7 @@ const TriMet = () => {
                 "mt-sm-5",
               ].join(" ")}
             >
-              On-site Transit Tracker
+              On-site Transit Tracker Signage
             </p>
           </Col>
           <Col xs={{ span: 12 }} sm={{ span: 5 }}>

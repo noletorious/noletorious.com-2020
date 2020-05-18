@@ -117,6 +117,7 @@ const Attensa = () => {
       <ProjectHeader
         jobTitle="UI/Visual Designer"
         description="Product Design, UX/I Design, Visual Design, Branding, Infographics, and Content Marketing"
+        impact="Attensa is a information management company that aims to provide people with the right information, at the right time, in order to do their jobs well. As their Visual Designer, I helped with the relaunch of their new product in 2014. During my time there I worked closely together with clients, engineers and product managers on creating educational visuals and provided design solutions for aspects of the app that needed to be mocked up before implementation."
         logo={data.attensaLogo.childImageSharp.fluid}
         c1="#fff"
         c2="#f78f1e"

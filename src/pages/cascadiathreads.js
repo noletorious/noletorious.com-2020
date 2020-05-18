@@ -98,7 +98,8 @@ const CascadiaThreads = () => {
     <Layout>
       <ProjectHeader
         jobTitle="Design Lead"
-        description="UX Design, Visual Design, Motion Graphics, Video/Content Production, Photography, Wordpress"
+        description="UX Design, Visual Design, Motion Graphics, Video/Content Production, Wordpress"
+        impact="Cascadia Threads is a personal project that came about in 2015. It was a lifestyle brand and our main goal was to create a online store along with increasing awareness around climate change. Our appeal was to focus on meshing fun, urban, tech styles with a sustainable product."
         logo={data.ctLogo.childImageSharp.fluid}
         c1="#000"
         c2="#131313"

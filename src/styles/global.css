@@ -31,13 +31,27 @@ body.dark-mode .dark-mode-toggle > button {
 body.dark-mode .dark-mode-toggle > button:last-child {
   color: lightblue;
 }
+.content p {
+  line-height: 1.6 !important;
+}
 .content code {
   background-color: #cbe9ff;
   border-radius: 2px;
   font-size: 1em;
   padding: 0 5px;
 }
-.content a {
+.content .impact-link {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+button.impact-link:focus,
+button.impact-link:active {
+  outline: none !important;
+  box-shadow: none;
+}
+.content a,
+.content .impact-link {
   text-decoration: none;
   color: #ff657c !important;
 }
@@ -71,6 +85,7 @@ body.dark-mode .content a {
   display: flex;
   align-items: center;
 }
+
 label.dmcheck {
   width: 30px;
   height: 10px;

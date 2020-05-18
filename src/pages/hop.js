@@ -64,7 +64,8 @@ const Hop = () => {
     <Layout>
       <ProjectHeader
         jobTitle="Web/Motion Designer"
-        description="Hand model, video production, motion graphics, 2D animation, UI Design"
+        description="Hand model, video production, motion graphics, 2D animation, interaction design"
+        impact="Implemented by TriMet, Hop Fastpass is the first contactless fare system in the United States. Around the time of Hop's initial launch in 2017, my role was to audit the website's marketing webpages along with certain user user interactions within the web app portion. Since then my responsibilities have expanded in to cross-collaboration with engineers, marketers, videographers particularly around video production, motion graphics, and the continuation of addressing any user experience issues."
         logo={data.hopLogo.childImageSharp.fluid}
         c1="#2a0486"
         c2="#fecb38"
@@ -107,16 +108,24 @@ const Hop = () => {
             </video>
             <p className={captionText()}>
               <em>
-                Solution:{" "}
+                Solution: Create a responsive{" "}
                 <a
                   href="https://trimet.org/waystopay/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Create a short and friendly questionnare
+                  short and friendly questionnare
                 </a>
-                .
-              </em>
+              </em>{" "}
+              using{" "}
+              <a
+                href="https://www.gatsbyjs.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Gatsbyjs
+              </a>
+              .
             </p>
           </Col>
         </Row>
@@ -186,7 +195,15 @@ const Hop = () => {
               </span>
             </video>
             <p className={captionText()}>
-              Create fun animations for marketing campaigns.
+              Responsible for creating{" "}
+              <a
+                href="https://dribbble.com/shots/11102697-Hop-Fastpass-Where-to-get-a-card"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                fun animations
+              </a>{" "}
+              for marketing campaigns.
             </p>
           </Col>
           <Col sm={{ span: 6 }}>
@@ -230,17 +247,18 @@ const Hop = () => {
               className={["img-fluid", "mt-4"].join(" ")}
             />
           </Col>
-          <Col xs={{ span: 12 }} className="mb-4">
+          <Col xs={{ span: 12 }} className="mb-5">
             <p className={captionText()}>
-              Animated Hopster{" "}
+              Added an extra layer of security by animating the Hopster mascots
+              within app's{" "}
               <a
                 href="https://myhopcard.com/home/pay-with-your-phone"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Virtual Card
+                virtual card
               </a>{" "}
-              Validator
+              validator.
             </p>
           </Col>
         </Row>
