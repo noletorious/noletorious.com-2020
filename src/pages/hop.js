@@ -65,7 +65,7 @@ const Hop = () => {
       <ProjectHeader
         jobTitle="Web/Motion Designer"
         description="Hand model, video production, motion graphics, 2D animation, interaction design"
-        impact="Implemented by TriMet, Hop Fastpass is the first contactless fare system in the United States. Around the time of Hop's initial launch in 2017, my role was to audit the website's marketing webpages along with certain user user interactions within the web app portion. Since then my responsibilities have expanded in to cross-collaboration with engineers, marketers, videographers particularly around video production, motion graphics, and the continuation of addressing any user experience issues."
+        impact="Implemented by TriMet, Hop Fastpass is the first contactless fare system in the United States. During Hop's initial launch in 2017, my role was to audit the design of the website and app and provide solutions for outstanding issues. Since then my responsibilities have expanded collaborating with engineers, marketers, videographers around video production, motion graphics, and the continuation of addressing any user experience issues."
         logo={data.hopLogo.childImageSharp.fluid}
         c1="#2a0486"
         c2="#fecb38"
@@ -80,7 +80,7 @@ const Hop = () => {
               fluid={data.hopTap.childImageSharp.fluid}
               className={["rounded-lg"].join(" ")}
             />
-            <p className={captionText()}>Unofficial go-to hand model.</p>
+            <p className={captionText()}>Go-to hand model.</p>
           </Col>
         </Row>
         <Row>
@@ -90,7 +90,8 @@ const Hop = () => {
               className="rounded-lg"
             />
             <p className={captionText()}>
-              Common Problem: Users were unsure on what fare type to use.
+              Example Problem: With the many options, riders were unsure on what
+              fare type to use.
             </p>
           </Col>
           <Col xs={{ span: 6 }}>
@@ -163,7 +164,7 @@ const Hop = () => {
               className="rounded-lg"
             />
             <p className={captionText()}>
-              Updating the marketing pages of{" "}
+              Work together with our engineering team on{" "}
               <a
                 href="//myhopcard.com"
                 target="_blank"

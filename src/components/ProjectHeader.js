@@ -63,7 +63,7 @@ const ProjectHeader = ({
               <Accordion.Collapse eventKey="0">
                 <p
                   style={{ borderTop: "1px solid rgba(255,255,255,.2)" }}
-                  className={["small", "pt-3"].join(" ")}
+                  className={["pt-3"].join(" ")}
                 >
                   {impact}
                 </p>

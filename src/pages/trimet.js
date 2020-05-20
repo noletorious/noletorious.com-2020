@@ -126,7 +126,7 @@ const TriMet = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                TriMet's design system
+                TriMet's digital design system
               </a>
               .
             </p>
@@ -245,8 +245,8 @@ const TriMet = () => {
               className={["alert", "alert-primary", "small", "mb-5"].join(" ")}
             >
               With <strong>8 million page views per month</strong>, this is
-              project has a very high impact on TriMet as an agency as well as
-              transit riders in Portland.
+              project has a very high impact on TriMet and Portland riders.
+              Project breakdown coming soon!
             </p>
           </Col>
         </Row>
