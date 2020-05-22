@@ -8,6 +8,8 @@ import Row from "react-bootstrap/Row"
 import styled from "styled-components"
 import useDarkMode from "use-dark-mode"
 
+import NextContentPage from "../components/NextContentPage"
+
 const TriMetArrivals = () => {
   const darkMode = useDarkMode()
   useEffect(() => {
@@ -279,7 +281,9 @@ const TriMetArrivals = () => {
             </Col>
             <Col xs={{ span: 12 }} sm={{ span: 6 }}>
               <h3 className={["mb-3"].join(" ")}>Refresh your favorites</h3>
-              <p>Words Words words</p>
+              <p>Toggle stops</p>
+              <p>Track a vehicle</p>
+              <p>Toggle dark mode, helps with glare in bright places</p>
             </Col>
           </Row>
           <Row className={["mb-5", "py-5"].join(" ")}>
@@ -289,6 +293,7 @@ const TriMetArrivals = () => {
           </Row>
         </Container>
       </Container>
+      <NextContentPage title="Attensa" otherProject="/attensa" />
     </Layout>
   )
 }
