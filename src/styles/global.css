@@ -88,6 +88,9 @@ body.dark-mode .content .impact-link {
   display: flex;
   align-items: center;
 }
+.g-rounded {
+  border-radius: 12px;
+}
 
 label.dmcheck {
   width: 30px;

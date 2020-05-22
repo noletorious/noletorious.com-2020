@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import Container from "react-bootstrap/Container"
 import Col from "react-bootstrap/Col"
@@ -24,6 +24,13 @@ import pocUAwebm from "../images/poc-animations/trimet-useraccounts.webm"
 const TriMet = () => {
   const data = useStaticQuery(graphql`
     query {
+      homes: file(relativePath: { eq: "arrivals/homes.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
       trimetPDXResults: file(relativePath: { eq: "trimet-pdxresult.jpg" }) {
         childImageSharp {
           fluid {
@@ -105,7 +112,7 @@ const TriMet = () => {
         bg="#084c8d"
       />
       <Container className="my-5">
-        <Row>
+        <Row className={["py-5"].join(" ")}>
           <Col xs={{ span: 12 }} sm={{ span: 8, offset: 2 }}>
             <Image
               fluid={data.trimetStyleGuide.childImageSharp.fluid}
@@ -134,7 +141,7 @@ const TriMet = () => {
         </Row>
         <Row>
           <Col>
-            <Row>
+            <Row className={["py-5"].join(" ")}>
               <Col xs={{ span: 6 }}>
                 <Image
                   fluid={data.trimetInsta.childImageSharp.fluid}
@@ -251,7 +258,7 @@ const TriMet = () => {
           </Col>
         </Row>
         <Row>
-          <Col className="my-5">
+          <Col className={["my-5", "py-5"].join(" ")}>
             <Row>
               {/* PDX Screens */}
               <Col xs={{ span: 9 }} sm={{ span: 8 }}>
@@ -300,54 +307,43 @@ const TriMet = () => {
         </Row>
         {/* New Transit Tracker */}
         <Row>
-          <Col xs={{ span: 12 }} sm={{ span: 5 }}>
+          <Col xs={{ span: 12 }} sm={{ span: 6 }}>
             <Image
               fluid={data.trimetOldTT.childImageSharp.fluid}
               className="rounded"
             />
-            <p
-              className={[
-                "small",
-                "text-muted",
-                "text-center",
-                "mt-2",
-                "mb-4",
-              ].join(" ")}
-            >
-              Current Design
-            </p>
           </Col>
-          <Col xs={{ span: 12 }} sm={{ span: 2 }}>
-            <p
-              className={[
-                "small",
-                "text-muted",
-                "text-center",
-                "mb-4",
-                "mt-sm-5",
-              ].join(" ")}
-            >
-              On-site Transit Tracker Signage
-            </p>
-          </Col>
-          <Col xs={{ span: 12 }} sm={{ span: 5 }}>
+          <Col xs={{ span: 12 }} sm={{ span: 6 }}>
             <Image
               fluid={data.trimetNewTT.childImageSharp.fluid}
               className="rounded"
             />
+          </Col>
+          <Col>
             <p
-              className={[
-                "small",
-                "text-muted",
-                "text-center",
-                "mt-2",
-                "mb-5",
-              ].join(" ")}
+              className={["small", "text-muted", "text-center", "my-4"].join(
+                " "
+              )}
             >
-              Redesign
+              On-site Transit Tracker Signage Redesign (WIP)
             </p>
           </Col>
         </Row>
+      </Container>
+      <Container className={["py-5"].join(" ")} fluid>
+        <Container>
+          <Row>
+            <Col xs={{ span: 12 }} sm={{ span: 6, offset: 3 }}>
+              <Image
+                fluid={data.homes.childImageSharp.fluid}
+                className={["d-block", "mx-auto"].join(" ")}
+              />
+              <p className={["text-center"].join(" ")}>
+                Experimental: <Link to="/trimet-arrivals">TriMet Arrivals</Link>
+              </p>
+            </Col>
+          </Row>
+        </Container>
       </Container>
       <Container className="bg-white" fluid>
         {/* Proof of concept App animations */}
@@ -366,10 +362,7 @@ const TriMet = () => {
               </span>
             </video>
           </Col>
-          <Col
-            xs={{ span: 6 }}
-            className={["border-left", "border-bottom"].join(" ")}
-          >
+          <Col xs={{ span: 6 }} className={["border-left"].join(" ")}>
             <video
               loop
               muted
@@ -398,6 +391,7 @@ const TriMet = () => {
                   "border",
                   "bg-white",
                   "px-3",
+                  "small",
                 ].join(" ")}
               >
                 Proof of concept microinteractions.
@@ -420,10 +414,7 @@ const TriMet = () => {
               </span>
             </video>
           </Col>
-          <Col
-            xs={{ span: 6 }}
-            className={["border-left", "border-bottom"].join(" ")}
-          >
+          <Col xs={{ span: 6 }} className={["border-left"].join(" ")}>
             <video
               loop
               muted
@@ -439,8 +430,9 @@ const TriMet = () => {
           </Col>
         </Row>
       </Container>
+
       <Container className={["bg-white"].join(" ")} fluid>
-        <Row noGutters={true} className="border-bottom">
+        <Row noGutters={true} className="border-top">
           <Col xs={{ span: 8, offset: 2 }}>
             <img
               src={TriMetLogoGif}

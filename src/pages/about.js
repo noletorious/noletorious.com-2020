@@ -109,7 +109,7 @@ const About = () => {
                     "pb-3",
                   ].join(" ")}
                 >
-                  Experience
+                  Work &amp; Education
                 </h2>
                 {jobs.map(job => (
                   <div key={job.employer} className="mb-5">
@@ -134,7 +134,7 @@ const About = () => {
                     "pb-3",
                   ].join(" ")}
                 >
-                  Proficiencies
+                  Muscle Memory
                 </h2>
                 <ul style={{ paddingInlineStart: "20px" }}>
                   <li>
@@ -152,8 +152,13 @@ const About = () => {
                   <li>
                     <h5>Development</h5>
                     <p className={["small", "mb-3", "text-muted"].join(" ")}>
-                      Git, Reactjs, VSCode, Android Studio, currently learning
-                      Flutter
+                      Git, Reactjs, VSCode, Android Studio
+                    </p>
+                  </li>
+                  <li>
+                    <h5>Learning</h5>
+                    <p className={["small", "mb-3", "text-muted"].join(" ")}>
+                      Flutter/Dart, AR with Unity, Data Structures, Algorithms
                     </p>
                   </li>
                 </ul>
