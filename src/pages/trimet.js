@@ -348,7 +348,10 @@ const TriMet = () => {
       <Container className="bg-white" fluid>
         {/* Proof of concept App animations */}
         <Row noGutters={true}>
-          <Col xs={{ span: 6 }} className="border-bottom">
+          <Col
+            xs={{ span: 6 }}
+            className={["border-bottom", "border-top"].join(" ")}
+          >
             <video
               loop
               muted
@@ -362,7 +365,10 @@ const TriMet = () => {
               </span>
             </video>
           </Col>
-          <Col xs={{ span: 6 }} className={["border-left"].join(" ")}>
+          <Col
+            xs={{ span: 6 }}
+            className={["border-left", "border-bottom", "border-top"].join(" ")}
+          >
             <video
               loop
               muted
