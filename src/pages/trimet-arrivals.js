@@ -13,15 +13,17 @@ import {
   faUserCheck,
   faUserShield,
   faUserTimes,
+  faExternalLinkAlt,
 } from "@fortawesome/free-solid-svg-icons"
 import NextContentPage from "../components/NextContentPage"
 
+import toggleFavoritesMp4 from "../images/arrivals/toggle-favorites.mp4"
+
 const TriMetArrivals = () => {
-  const darkMode = useDarkMode()
+  const darkMode = useDarkMode(true)
   useEffect(() => {
     console.log("useEffect")
-    return darkMode.disable()
-    // Run! Like go get some data from an API.
+    darkMode.disable()
   }, [])
   const data = useStaticQuery(graphql`
     query {
@@ -39,12 +41,18 @@ const TriMetArrivals = () => {
           fluid {
             ...GatsbyImageSharpFluid
           }
+          original {
+            src
+          }
         }
       }
       iteration2: file(relativePath: { eq: "arrivals/TT-iteration-2.0.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
+          }
+          original {
+            src
           }
         }
       }
@@ -53,12 +61,18 @@ const TriMetArrivals = () => {
           fluid {
             ...GatsbyImageSharpFluid
           }
+          original {
+            src
+          }
         }
       }
       audit: file(relativePath: { eq: "arrivals/trimetorg-audit.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
+          }
+          original {
+            src
           }
         }
       }
@@ -78,6 +92,10 @@ const TriMetArrivals = () => {
       }
     }
   `)
+  const flowAuditImage = data.audit.childImageSharp.original.src
+  const iteration1Image = data.iteration1.childImageSharp.original.src
+  const iteration2Image = data.iteration2.childImageSharp.original.src
+  const iteration21Image = data.iteration21.childImageSharp.original.src
   const RosetteImageWrap = styled.div`
     max-width: 75px;
     width: 75px;
@@ -88,6 +106,10 @@ const TriMetArrivals = () => {
   `
   const OrderedList = styled.ol`
     line-height: 2.6;
+  `
+  const ListItem = styled.li`
+    line-height: 1.6;
+    margin-bottom: 1em;
   `
   const RiderCol = styled(Col)`
     background-color: rgba(255, 255, 255, 0.1);
@@ -142,7 +164,15 @@ const TriMetArrivals = () => {
             <Col xs={{ span: 12 }} sm={{ span: 8, offset: 2 }}>
               <h3 className={["mb-3"].join(" ")}>Overview</h3>
               <div
-                className={["bg-gray", "p-5", "border", "g-rounded"].join(" ")}
+                className={[
+                  "bg-gray",
+                  "py-5",
+                  "px-sm-5",
+                  "px-3",
+                  "py-5",
+                  "border",
+                  "g-rounded",
+                ].join(" ")}
               >
                 <h3
                   className={[
@@ -156,7 +186,11 @@ const TriMetArrivals = () => {
                 </h3>
                 <p className={["pb-5", "text-muted"].join(" ")}>
                   The transit tracker tool on{" "}
-                  <a href="https://trimet.org/" target="_blank" rel="noref">
+                  <a
+                    href="https://trimet.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     trimet.org
                   </a>{" "}
                   is the most used tool on the website. As a rider myself, I
@@ -236,7 +270,14 @@ const TriMetArrivals = () => {
             <Col xs={{ span: 12 }} sm={{ span: 8, offset: 2 }}>
               <h3 className={["mb-3"].join(" ")}>Research</h3>
               <div
-                className={["bg-gray", "p-5", "border", "g-rounded"].join(" ")}
+                className={[
+                  "bg-gray",
+                  "px-sm-5",
+                  "px-3",
+                  "py-5",
+                  "border",
+                  "g-rounded",
+                ].join(" ")}
               >
                 <h3
                   className={[
@@ -249,12 +290,12 @@ const TriMetArrivals = () => {
                   Surveys
                 </h3>
                 <UnorderedList className="mb-3">
-                  <li>2019 web surveys</li>
-                  <li>2019 MOD beta feedback</li>
-                  <li>2018 Customer Experience Audit</li>
-                  <li>2017 Trip Tools Survey</li>
-                  <li>2014 focus group SIPs</li>
-                  <li>Social media and other rider feedback</li>
+                  <ListItem>2019 web surveys</ListItem>
+                  <ListItem>2019 MOD beta feedback</ListItem>
+                  <ListItem>2018 Customer Experience Audit</ListItem>
+                  <ListItem>2017 Trip Tools Survey</ListItem>
+                  <ListItem>2014 focus group SIPs</ListItem>
+                  <ListItem>Social media and other rider feedback</ListItem>
                 </UnorderedList>
                 <p className="text-muted">
                   With many motives and findings per survey, each survey shared
@@ -279,16 +320,18 @@ const TriMetArrivals = () => {
                   What riders want
                 </h3>
                 <OrderedList className="mb-3">
-                  <li>Real-time vehicle locations on map</li>
-                  <li>Nearby service relative to current location</li>
-                  <li>Save favorites/preferences</li>
-                  <li>R̶e̶a̶l̶-̶t̶i̶m̶e̶ ̶t̶r̶i̶p̶ ̶p̶l̶a̶n̶n̶i̶n̶g̶ (Out of scope)</li>
-                  <li>Better alerts</li>
-                  <li>G̶u̶i̶d̶e̶d̶ ̶n̶a̶v̶i̶g̶a̶t̶i̶o̶n̶ (Out of scope)</li>
-                  <li>Alarms/notifications</li>
-                  <li>Voice command</li>
-                  <li>Hop integration</li>
-                  <li>F̶l̶e̶x̶i̶b̶l̶e̶/̶s̶m̶a̶r̶t̶ ̶i̶t̶i̶n̶e̶r̶a̶r̶i̶e̶s̶ (Out of scope)</li>
+                  <ListItem>Real-time vehicle locations on map</ListItem>
+                  <ListItem>
+                    Nearby service relative to current location
+                  </ListItem>
+                  <ListItem>Save favorites/preferences</ListItem>
+                  <ListItem>R̶e̶a̶l̶-̶t̶i̶m̶e̶ ̶t̶r̶i̶p̶ ̶p̶l̶a̶n̶n̶i̶n̶g̶ (Out of scope)</ListItem>
+                  <ListItem>Better alerts</ListItem>
+                  <ListItem>G̶u̶i̶d̶e̶d̶ ̶n̶a̶v̶i̶g̶a̶t̶i̶o̶n̶ (Out of scope)</ListItem>
+                  <ListItem>Alarms/notifications</ListItem>
+                  <ListItem>Voice command</ListItem>
+                  <ListItem>Hop integration</ListItem>
+                  <ListItem>F̶l̶e̶x̶i̶b̶l̶e̶/̶s̶m̶a̶r̶t̶ ̶i̶t̶i̶n̶e̶r̶a̶r̶i̶e̶s̶ (Out of scope)</ListItem>
                 </OrderedList>
                 <p className="text-muted">
                   Back to the initial ideas of this concept app, I've marked
@@ -306,7 +349,14 @@ const TriMetArrivals = () => {
             <Col xs={{ span: 12 }} sm={{ span: 8, offset: 2 }}>
               <h3 className={["mb-3"].join(" ")}>The User/Rider</h3>
               <div
-                className={["bg-gray", "p-5", "border", "g-rounded"].join(" ")}
+                className={[
+                  "bg-gray",
+                  "px-sm-5",
+                  "px-3",
+                  "py-5",
+                  "border",
+                  "g-rounded",
+                ].join(" ")}
               >
                 <h3
                   className={[
@@ -375,12 +425,19 @@ const TriMetArrivals = () => {
               </div>
             </Col>
           </Row>
-          {/* Process */}
+          {/* Design */}
           <Row className={["mb-5"].join(" ")}>
             <Col xs={{ span: 12 }} sm={{ span: 8, offset: 2 }}>
               <h3 className={["mb-3"].join(" ")}>Flows</h3>
               <div
-                className={["bg-gray", "p-5", "border", "g-rounded"].join(" ")}
+                className={[
+                  "bg-gray",
+                  "px-sm-5",
+                  "px-3",
+                  "py-5",
+                  "border",
+                  "g-rounded",
+                ].join(" ")}
               >
                 <h3
                   className={[
@@ -393,9 +450,9 @@ const TriMetArrivals = () => {
                   Transit tracker
                 </h3>
                 <p className="text-muted">
-                  I based the UX flow of this concept app closely to the
-                  trimet.org re-architecture(TORA) project particularly the
-                  transit tracker tools.
+                  The UX flow of this concept app closely to the trimet.org
+                  re-architecture(TORA) project particularly the transit tracker
+                  tools.
                 </p>
                 <p className="text-muted">
                   To summarize the process my manager, senior designer and I
@@ -417,7 +474,14 @@ const TriMetArrivals = () => {
                     "mt-5",
                   ].join(" ")}
                 >
-                  Generalized audit of trimet.org trip tool features.
+                  Generalized audit of trimet.org trip tool features.{" "}
+                  <a
+                    href={flowAuditImage}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FontAwesomeIcon icon={faExternalLinkAlt} />
+                  </a>
                 </p>
                 <Image
                   fluid={data.audit.childImageSharp.fluid}
@@ -434,7 +498,14 @@ const TriMetArrivals = () => {
                     "mt-5",
                   ].join(" ")}
                 >
-                  Lower fidelity mockups.
+                  V1: Lower fidelity mockups.{" "}
+                  <a
+                    href={iteration1Image}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FontAwesomeIcon icon={faExternalLinkAlt} />
+                  </a>
                 </p>
                 <Image
                   fluid={data.iteration1.childImageSharp.fluid}
@@ -451,7 +522,23 @@ const TriMetArrivals = () => {
                     "mt-5",
                   ].join(" ")}
                 >
-                  Higher fidelity mockups.
+                  V4: Higher fidelity mockups:{" "}
+                  <a
+                    href={iteration2Image}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    By Stop ID or map{" "}
+                    <FontAwesomeIcon icon={faExternalLinkAlt} />
+                  </a>{" "}
+                  /{" "}
+                  <a
+                    href={iteration21Image}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    By Omni-box <FontAwesomeIcon icon={faExternalLinkAlt} />
+                  </a>
                 </p>
                 <Image
                   fluid={data.iteration2.childImageSharp.fluid}
@@ -461,14 +548,32 @@ const TriMetArrivals = () => {
                   fluid={data.iteration21.childImageSharp.fluid}
                   className="rounded-lg"
                 />
-                <p className="mb-4"></p>
+                <p
+                  className={[
+                    "text-center",
+                    "text-muted",
+                    "small",
+                    "mt-5",
+                  ].join(" ")}
+                >
+                  After V4 the flow did not change. The entire design process
+                  went to V9.{" "}
+                </p>
               </div>
             </Col>
           </Row>
           {/* Interactions */}
           <Row className={["py-5"].join(" ")}>
             <Col xs={{ span: 12 }}>
-              <h3 className={["mb-3", "text-center"].join(" ")}>
+              <h3 className={["mb-3", "text-center"].join(" ")}>Arrivals</h3>
+              <h3
+                className={[
+                  "mb-3",
+                  "small",
+                  "text-center",
+                  "text-uppercase",
+                ].join(" ")}
+              >
                 Interactions
               </h3>
             </Col>
@@ -491,11 +596,18 @@ const TriMetArrivals = () => {
         <Container className="pt-5">
           <Row className={["pt-5"].join(" ")}>
             <Col xs={{ span: 12 }} sm={{ span: 6 }}>
-              <img
-                src="https://via.placeholder.com/500x500"
-                alt="placeholder"
-                className={["img-fluid", "mb-3"].join(" ")}
-              />
+              <video
+                loop
+                muted
+                autoPlay
+                className={["w-100", "h-100", "d-block"].join(" ")}
+              >
+                {/* <source src={pocUAwebm} type="video/webm" /> */}
+                <source src={toggleFavoritesMp4} type="video/mp4" />
+                <span className="text-light">
+                  Your browser does not support HTML5 video.
+                </span>
+              </video>
             </Col>
             <Col
               xs={{ span: 12 }}
@@ -503,14 +615,14 @@ const TriMetArrivals = () => {
               className={["align-items-center", "d-flex"].join(" ")}
             >
               <div className={["flex-column", "mb-5"].join(" ")}>
-                <h3 className={["mb-3"].join(" ")}>
+                <h3 className={["mb-4"].join(" ")}>
                   Your arrivals and stops upfront
                 </h3>
                 <UnorderedList>
-                  <li>
+                  <ListItem>Add labels for more context.</ListItem>
+                  <ListItem>
                     Toggle your favorite stops and service lines at a stop.
-                  </li>
-                  <li>Add labels for more context.</li>
+                  </ListItem>
                 </UnorderedList>
               </div>
             </Col>
@@ -521,21 +633,21 @@ const TriMetArrivals = () => {
               sm={{ span: 6, order: 1 }}
               className={["align-items-center", "d-flex"].join(" ")}
             >
-              <div
-                className={[
-                  "flex-column",
-                  "mb-5",
-                  "text-sm-right",
-                  "text-xs-left",
-                ].join(" ")}
-              >
+              <div className={["flex-column", "mb-5"].join(" ")}>
                 <h3 className={["mb-3"].join(" ")}>
-                  Track a vehicle serving a stop
+                  Learn routes, find stops, track vehicles
                 </h3>
-                <p>
-                  Relative to a stop, get the position of a vehicle on the map
-                  quickly.
-                </p>
+                <UnorderedList>
+                  <ListItem>View routes on a map.</ListItem>
+                  <ListItem>
+                    Drill down to their relevant stop where they can favorite
+                    stops and service lines at that stop.
+                  </ListItem>
+                  <ListItem>
+                    Track vehicles or link to them to the full schedule for all
+                    the lines at that stop, with the selected line expanded.
+                  </ListItem>
+                </UnorderedList>
               </div>
             </Col>
             <Col xs={{ span: 12, order: 1 }} sm={{ span: 6, order: 2 }}>
@@ -562,10 +674,10 @@ const TriMetArrivals = () => {
               <div className={["flex-column", "mb-5"].join(" ")}>
                 <h3 className={["mb-3"].join(" ")}>Toggle and refresh</h3>
                 <UnorderedList>
-                  <li>
+                  <ListItem>
                     Toggle dark mode for higher contrast, helps with glare.
-                  </li>
-                  <li>Force refresh your arrivals.</li>
+                  </ListItem>
+                  <ListItem>Force refresh your arrivals.</ListItem>
                 </UnorderedList>
               </div>
             </Col>
@@ -574,7 +686,14 @@ const TriMetArrivals = () => {
             <Col xs={{ span: 12 }} sm={{ span: 8, offset: 2 }}>
               <h3 className={["mb-3"].join(" ")}>Conclusion</h3>
               <div
-                className={["bg-gray", "p-5", "border", "g-rounded"].join(" ")}
+                className={[
+                  "bg-gray",
+                  "px-sm-5",
+                  "px-3",
+                  "py-5",
+                  "border",
+                  "g-rounded",
+                ].join(" ")}
               >
                 <h3
                   className={[

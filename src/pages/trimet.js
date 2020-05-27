@@ -253,7 +253,7 @@ const TriMet = () => {
             >
               With <strong>8 million page views per month</strong>, this is
               project has a very high impact on TriMet and Portland riders.
-              Project breakdown coming soon!
+              Breakdown on this project per request.
             </p>
           </Col>
         </Row>
@@ -406,7 +406,7 @@ const TriMet = () => {
           </Col>
         </Row>
         <Row noGutters={true}>
-          <Col xs={{ span: 6 }} className={["border-bottom"].join(" ")}>
+          <Col xs={{ span: 6 }} className={[].join(" ")}>
             <video
               loop
               muted
