@@ -341,9 +341,9 @@ const TriMetArrivals = () => {
                   Back to the initial ideas of this concept app, I've marked
                   which <em>wants</em> I thought were out of scope as they would
                   be better suited under trip planning features. Again, my goal
-                  was to create an app concept that did a few things really
-                  well, however this concept app could scale considering the
-                  available data.{" "}
+                  was to create an app that did a few things really well,
+                  however this concept app could scale considering the available
+                  data.{" "}
                 </p>
               </div>
             </Col>
