@@ -159,7 +159,7 @@ const About = () => {
                     <h5>Learning</h5>
                     <p className={["small", "mb-3", "text-muted"].join(" ")}>
                       Flutter/Dart, Data Structures, Algorithms, Currently
-                      enrolled in Google's AR/VR Coursera course
+                      enrolled in Google's Python Coursera course
                     </p>
                   </li>
                 </ul>

@@ -214,9 +214,9 @@ const TriMetArrivals = () => {
                   Problem
                 </h3>
                 <p className={["pb-5", "text-muted"].join(" ")}>
-                  With so many people relying on this information having it
-                  accessible via an application would allow TriMet to extend
-                  their services and utilitize more of their capabilities
+                  Many people relying on transit tracker information and having
+                  it accessible via an mobile application would allow TriMet to
+                  extend their services and utilitize more of their capabilities
                   especially beyond the browser.{" "}
                 </p>
                 <h3
@@ -303,10 +303,9 @@ const TriMetArrivals = () => {
                   <ListItem>Social media and other rider feedback</ListItem>
                 </UnorderedList>
                 <p className="text-muted">
-                  With many motives and findings per survey, each survey shared
-                  the underlying context which was to help TriMet understand the
-                  user's experience and perception around the reliability of our
-                  information/service.{" "}
+                  Each survey shared the underlying goal which was to help
+                  TriMet understand the user's experience and perception around
+                  the reliability of our information/service.{" "}
                 </p>
                 <p className="text-muted">
                   Consolidating user feedback, the list below describes the top
@@ -375,7 +374,7 @@ const TriMetArrivals = () => {
                 </h3>
                 <p className="text-muted">
                   From our Audience Segmentation Survey Research Report, we
-                  generally break them each persona in four categories:
+                  generally break each persona in four categories:
                 </p>
                 <Row>
                   <RiderCol className="border">
@@ -463,9 +462,9 @@ const TriMetArrivals = () => {
                   Transit tracker
                 </h3>
                 <p className="text-muted">
-                  The UX flow of this concept app closely to the trimet.org
-                  re-architecture(TORA) project particularly the transit tracker
-                  tools.
+                  The UX flow of this concept app closely resembles to the
+                  trimet.org re-architecture(TORA) project particularly the
+                  transit tracker features.
                 </p>
                 <p className="text-muted">
                   To summarize the process my manager, senior designer and I
@@ -597,6 +596,7 @@ const TriMetArrivals = () => {
           </Row>
         </Container>
       </Container>
+      {/* XD interactions screenshot */}
       <Container fluid style={{ backgroundColor: "#e4e4e4" }}>
         <Container>
           <Row>
@@ -644,6 +644,7 @@ const TriMetArrivals = () => {
               </div>
             </Col>
           </Row>
+          {/* Interactions */}
           <Row className={["mb-5", "pt-5"].join(" ")}>
             <Col
               xs={{ span: 12, order: 2 }}
@@ -707,6 +708,7 @@ const TriMetArrivals = () => {
               </div>
             </Col>
           </Row>
+          {/* Conclusion */}
           <Row className={["my-5", "pt-5"].join(" ")}>
             <Col xs={{ span: 12 }} sm={{ span: 8, offset: 2 }}>
               <h3 className={["mb-3"].join(" ")}>Conclusion</h3>
@@ -732,11 +734,11 @@ const TriMetArrivals = () => {
                 </h3>
                 <p className="text-muted">
                   Simplifying the complicated needs of transit riders was the
-                  motivation behind this experimental app. As the designer the
-                  heavy lifting is balancing between complexity and efficiency,
-                  user expectations, available data, the technologies involved,
-                  and the available resources to build. Still, that is where the
-                  fun is.
+                  motivation behind this experimental app. As with many projects
+                  the heavy lifting is balancing between complexity and
+                  efficiency, managing user expectations, leveraging available
+                  data, considering the technologies involved and the available
+                  resources to build. Still, that is where the fun is.
                 </p>
                 <p className={["pb-5", "text-muted"].join(" ")}>
                   Learning more and looking forward, I do see a possible v2 of
@@ -750,7 +752,7 @@ const TriMetArrivals = () => {
                     "text-uppercase",
                   ].join(" ")}
                 >
-                  Next: More unique, possible features
+                  Next: More unique features
                 </h3>
                 <div className={["pb-0", "text-muted"].join(" ")}>
                   <div
