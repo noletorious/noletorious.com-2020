@@ -18,6 +18,8 @@ import {
 import NextContentPage from "../components/NextContentPage"
 
 import toggleFavoritesMp4 from "../images/arrivals/toggle-favorites.mp4"
+import LRFSTVMp4 from "../images/arrivals/LRFSTV.mp4"
+import TVDMMp4 from "../images/arrivals/TVDM.mp4"
 
 const TriMetArrivals = () => {
   const darkMode = useDarkMode(true)
@@ -627,7 +629,7 @@ const TriMetArrivals = () => {
               </div>
             </Col>
           </Row>
-          <Row className={["mb-5", "py-5"].join(" ")}>
+          <Row className={["mb-5", "pt-5"].join(" ")}>
             <Col
               xs={{ span: 12, order: 2 }}
               sm={{ span: 6, order: 1 }}
@@ -639,32 +641,40 @@ const TriMetArrivals = () => {
                 </h3>
                 <UnorderedList>
                   <ListItem>View routes on a map.</ListItem>
-                  <ListItem>
-                    Drill down to their relevant stop where they can favorite
-                    stops and service lines at that stop.
-                  </ListItem>
-                  <ListItem>
-                    Track vehicles or link to them to the full schedule for all
-                    the lines at that stop, with the selected line expanded.
-                  </ListItem>
+                  <ListItem>Drill down to relevant stops.</ListItem>
+                  <ListItem>Force refresh stop information.</ListItem>
                 </UnorderedList>
               </div>
             </Col>
             <Col xs={{ span: 12, order: 1 }} sm={{ span: 6, order: 2 }}>
-              <img
-                src="https://via.placeholder.com/500x500"
-                alt="placeholder"
-                className={["img-fluid", "mb-3"].join(" ")}
-              />
+              <video
+                loop
+                muted
+                autoPlay
+                className={["w-100", "h-100", "d-block"].join(" ")}
+              >
+                {/* <source src={pocUAwebm} type="video/webm" /> */}
+                <source src={LRFSTVMp4} type="video/mp4" />
+                <span className="text-light">
+                  Your browser does not support HTML5 video.
+                </span>
+              </video>
             </Col>
           </Row>
           <Row className={["pt-5"].join(" ")}>
             <Col xs={{ span: 12 }} sm={{ span: 6 }}>
-              <img
-                src="https://via.placeholder.com/500x500"
-                alt="placeholder"
-                className={["img-fluid", "mb-3"].join(" ")}
-              />
+              <video
+                loop
+                muted
+                autoPlay
+                className={["w-100", "h-100", "d-block"].join(" ")}
+              >
+                {/* <source src={pocUAwebm} type="video/webm" /> */}
+                <source src={TVDMMp4} type="video/mp4" />
+                <span className="text-light">
+                  Your browser does not support HTML5 video.
+                </span>
+              </video>
             </Col>
             <Col
               xs={{ span: 12 }}
@@ -674,10 +684,10 @@ const TriMetArrivals = () => {
               <div className={["flex-column", "mb-5"].join(" ")}>
                 <h3 className={["mb-3"].join(" ")}>Toggle and refresh</h3>
                 <UnorderedList>
+                  <ListItem>Quickly track vehicles</ListItem>
                   <ListItem>
                     Toggle dark mode for higher contrast, helps with glare.
                   </ListItem>
-                  <ListItem>Force refresh your arrivals.</ListItem>
                 </UnorderedList>
               </div>
             </Col>
