@@ -20,6 +20,9 @@ import NextContentPage from "../components/NextContentPage"
 import toggleFavoritesMp4 from "../images/arrivals/toggle-favorites.mp4"
 import LRFSTVMp4 from "../images/arrivals/LRFSTV.mp4"
 import TVDMMp4 from "../images/arrivals/TVDM.mp4"
+import toggleFavoritesWebm from "../images/arrivals/toggle-favorites.webm"
+import LRFSTVWebm from "../images/arrivals/LRFSTV.webm"
+import TVDMWebm from "../images/arrivals/TVDM.webm"
 
 const TriMetArrivals = () => {
   const darkMode = useDarkMode(true)
@@ -379,17 +382,21 @@ const TriMetArrivals = () => {
                     <FontAwesomeIcon
                       icon={faUserCheck}
                       size="2x"
-                      className="mb-2"
+                      className={["mb-2", "pt-2"].join(" ")}
                     />
-                    <p>Transit-Reliant Persona</p>
+                    <p className={["mb-0", "pb-2"].join(" ")}>
+                      Transit-Reliant Persona
+                    </p>
                   </RiderCol>
                   <RiderCol className="border">
                     <FontAwesomeIcon
                       icon={faUsersCog}
                       size="2x"
-                      className="mb-2"
+                      className={["mb-2", "pt-2"].join(" ")}
                     />
-                    <p>Strategic User Persona</p>
+                    <p className={["mb-0", "pb-2"].join(" ")}>
+                      Strategic User Persona
+                    </p>
                   </RiderCol>
                 </Row>
                 <Row className="mb-5">
@@ -397,17 +404,21 @@ const TriMetArrivals = () => {
                     <FontAwesomeIcon
                       icon={faUserShield}
                       size="2x"
-                      className="mb-2"
+                      className={["mb-2", "pt-2"].join(" ")}
                     />
-                    <p>Transit Hesitant Persona</p>
+                    <p className={["mb-0", "pb-2"].join(" ")}>
+                      Transit Hesitant Persona
+                    </p>
                   </RiderCol>
                   <RiderCol>
                     <FontAwesomeIcon
                       icon={faUserTimes}
                       size="2x"
-                      className="mb-2"
+                      className={["mb-2", "pt-2"].join(" ")}
                     />
-                    <p>Non-Rider Persona</p>
+                    <p className={["mb-0", "pb-2"].join(" ")}>
+                      Non-Rider Persona
+                    </p>
                   </RiderCol>
                 </Row>
                 <p className="text-muted">
@@ -500,7 +511,7 @@ const TriMetArrivals = () => {
                     "mt-5",
                   ].join(" ")}
                 >
-                  V1: Lower fidelity mockups.{" "}
+                  V1: Low fidelity mockups.{" "}
                   <a
                     href={iteration1Image}
                     target="_blank"
@@ -522,22 +533,26 @@ const TriMetArrivals = () => {
                     "text-muted",
                     "small",
                     "mt-5",
+                    "mb-1",
                   ].join(" ")}
                 >
                   V4: Higher fidelity mockups:{" "}
+                </p>
+                <p className={["text-center", "text-muted", "small"].join(" ")}>
                   <a
                     href={iteration2Image}
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="pr-2"
                   >
-                    By Stop ID or map{" "}
-                    <FontAwesomeIcon icon={faExternalLinkAlt} />
-                  </a>{" "}
-                  /{" "}
+                    By Stop ID <FontAwesomeIcon icon={faExternalLinkAlt} />
+                  </a>
+                  {"  "}/{"  "}
                   <a
                     href={iteration21Image}
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="pl-2"
                   >
                     By Omni-box <FontAwesomeIcon icon={faExternalLinkAlt} />
                   </a>
@@ -604,8 +619,8 @@ const TriMetArrivals = () => {
                 autoPlay
                 className={["w-100", "h-100", "d-block"].join(" ")}
               >
-                {/* <source src={pocUAwebm} type="video/webm" /> */}
                 <source src={toggleFavoritesMp4} type="video/mp4" />
+                <source src={toggleFavoritesWebm} type="video/webm" />
                 <span className="text-light">
                   Your browser does not support HTML5 video.
                 </span>
@@ -653,8 +668,8 @@ const TriMetArrivals = () => {
                 autoPlay
                 className={["w-100", "h-100", "d-block"].join(" ")}
               >
-                {/* <source src={pocUAwebm} type="video/webm" /> */}
                 <source src={LRFSTVMp4} type="video/mp4" />
+                <source src={LRFSTVWebm} type="video/webm" />
                 <span className="text-light">
                   Your browser does not support HTML5 video.
                 </span>
@@ -669,8 +684,8 @@ const TriMetArrivals = () => {
                 autoPlay
                 className={["w-100", "h-100", "d-block"].join(" ")}
               >
-                {/* <source src={pocUAwebm} type="video/webm" /> */}
                 <source src={TVDMMp4} type="video/mp4" />
+                <source src={TVDMWebm} type="video/webm" />
                 <span className="text-light">
                   Your browser does not support HTML5 video.
                 </span>

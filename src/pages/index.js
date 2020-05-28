@@ -45,7 +45,7 @@ const IndexPage = () => {
           }
         }
       }
-      hop: file(relativePath: { eq: "hopreader-front.png" }) {
+      hop: file(relativePath: { eq: "hopreader-front.jpg" }) {
         childImageSharp {
           original {
             src
