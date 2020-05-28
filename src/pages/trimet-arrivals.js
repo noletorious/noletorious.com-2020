@@ -214,8 +214,8 @@ const TriMetArrivals = () => {
                   Problem
                 </h3>
                 <p className={["pb-5", "text-muted"].join(" ")}>
-                  Many people relying on transit tracker information and having
-                  it accessible via an mobile application would allow TriMet to
+                  Many people rely on transit tracker information and having it
+                  accessible via an mobile application would allow TriMet to
                   extend their services and utilitize more of their capabilities
                   especially beyond the browser.{" "}
                 </p>
