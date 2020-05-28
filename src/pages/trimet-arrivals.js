@@ -733,6 +733,7 @@ const TriMetArrivals = () => {
                   Takeaways
                 </h3>
                 <p className="text-muted">
+                  Improving ridership means improving rider confidence.
                   Simplifying the complicated needs of transit riders was the
                   motivation behind this experimental app. As with many projects
                   the heavy lifting is balancing between complexity and
