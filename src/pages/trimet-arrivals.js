@@ -199,9 +199,8 @@ const TriMetArrivals = () => {
                     trimet.org
                   </a>{" "}
                   is the most used tool on the website. As a rider myself, I
-                  wanted to create a blue-sky, yet a very feature-focused app
-                  that would in theory use not all but the most useful data
-                  available from TriMet's public transit tracker API.{" "}
+                  wanted to create feature-focused app that would leverage
+                  TriMet's public transit tracker API.{" "}
                 </p>
                 <h3
                   className={[
