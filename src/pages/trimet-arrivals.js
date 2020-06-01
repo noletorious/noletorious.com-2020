@@ -215,8 +215,8 @@ const TriMetArrivals = () => {
                 <p className={["pb-5", "text-muted"].join(" ")}>
                   Many people rely on transit tracker information and having it
                   accessible via a mobile app would allow TriMet to extend their
-                  services and utilitize more of their capabilities especially
-                  beyond the browser.{" "}
+                  services and utilitize more of their capabilities beyond the
+                  browser.{" "}
                 </p>
                 <h3
                   className={[
@@ -579,18 +579,14 @@ const TriMetArrivals = () => {
           </Row>
           {/* Interactions */}
           <Row className={["py-5"].join(" ")}>
-            <Col xs={{ span: 12 }}>
+            <Col xs={{ span: 12 }} sm={{ span: 8, offset: 2 }}>
               <h3 className={["mb-3", "text-center"].join(" ")}>Arrivals</h3>
-              <h3
-                className={[
-                  "mb-3",
-                  "small",
-                  "text-center",
-                  "text-uppercase",
-                ].join(" ")}
-              >
-                Interactions
-              </h3>
+              <p className={["mb-3", "text-center", "text-muted"].join(" ")}>
+                {" "}
+                The design uses material cards and TriMet's font Source Sans
+                Pro. It is not 100% ADA compliant, for now I just wanted it to
+                keep it easy on the eyes.
+              </p>
             </Col>
           </Row>
         </Container>
@@ -652,7 +648,7 @@ const TriMetArrivals = () => {
             >
               <div className={["flex-column", "mb-5"].join(" ")}>
                 <h3 className={["mb-3"].join(" ")}>
-                  Learn routes, find stops, track vehicles
+                  Learn routes, find stops, get most recent data
                 </h3>
                 <UnorderedList>
                   <ListItem>View routes on a map.</ListItem>
