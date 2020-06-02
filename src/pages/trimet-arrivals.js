@@ -589,9 +589,10 @@ const TriMetArrivals = () => {
               <h3 className={["mb-3", "text-center"].join(" ")}>Arrivals</h3>
               <p className={["mb-3", "text-center", "text-muted"].join(" ")}>
                 {" "}
-                The design uses material cards and TriMet's font Source Sans
-                Pro. It is not 100% ADA compliant, for now I just wanted it to
-                keep it easy on the eyes.
+                The design uses Google material card styles, TriMet's font
+                Source Sans Pro and color schemes plus a few extra. I
+                acknowledge it's 100% ADA compliant, I just wanted it to keep it
+                easy on the eyes for now.
               </p>
             </Col>
           </Row>
