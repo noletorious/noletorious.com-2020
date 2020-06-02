@@ -336,13 +336,19 @@ const TriMetArrivals = () => {
                   <ListItem>Hop integration</ListItem>
                   <ListItem>F̶l̶e̶x̶i̶b̶l̶e̶/̶s̶m̶a̶r̶t̶ ̶i̶t̶i̶n̶e̶r̶a̶r̶i̶e̶s̶ (Out of scope)</ListItem>
                 </OrderedList>
+
                 <p className="text-muted">
-                  Back to the initial ideas of this concept app, I've marked
-                  which <em>wants</em> I thought were out of scope as they would
-                  be better suited under trip planning features. Again, my goal
-                  was to create an app that did a few things really well,
-                  however this concept app could scale considering the available
-                  data.{" "}
+                  The most important/common feature people wanted was to see
+                  where their upcoming bus was on a map relative to their
+                  current location. Back to the initial ideas of this concept
+                  app, I've also marked which <em>wants</em> I thought were out
+                  of scope as they would be better suited under trip planning
+                  features.
+                </p>
+                <p className="text-muted">
+                  My goal was to create an app that did a few things really
+                  well, however this concept app could scale considering the
+                  available data.{" "}
                 </p>
               </div>
             </Col>
@@ -421,8 +427,8 @@ const TriMetArrivals = () => {
                 </Row>
                 <p className="text-muted">
                   For a deeper dive in to the details of each persona, I will
-                  have a private page where I breakdown our method for designing
-                  the trimet.org re-architecture.{" "}
+                  have a private per request page where I breakdown our method
+                  for designing the trimet.org re-architecture.{" "}
                 </p>
                 <p>
                   <span className="text-muted">
