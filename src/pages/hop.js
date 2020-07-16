@@ -281,7 +281,7 @@ const Hop = () => {
           </Row>
         </Container>
       </Container>
-      <NextContentPage title="TriMet" otherProject="/trimet" />
+      <NextContentPage title="Attensa" otherProject="/attensa" />
     </Layout>
   )
 }
