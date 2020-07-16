@@ -153,6 +153,13 @@ const IndexPage = () => {
           </Col>
           <Col xs={{ span: 6 }} md={{ span: 3 }}>
             <ReusableCard
+              title={hop.title}
+              imgSrc={hop.imgSrc}
+              link={hop.link}
+            />
+          </Col>
+          <Col xs={{ span: 6 }} md={{ span: 3 }}>
+            <ReusableCard
               title={attensa.title}
               imgSrc={attensa.imgSrc}
               link={attensa.link}
@@ -163,13 +170,6 @@ const IndexPage = () => {
               title={cascadiathreads.title}
               imgSrc={cascadiathreads.imgSrc}
               link={cascadiathreads.link}
-            />
-          </Col>
-          <Col xs={{ span: 6 }} md={{ span: 3 }}>
-            <ReusableCard
-              title={hop.title}
-              imgSrc={hop.imgSrc}
-              link={hop.link}
             />
           </Col>
         </Row>

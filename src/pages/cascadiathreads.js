@@ -265,6 +265,13 @@ const CascadiaThreads = () => {
             </video>
           </Col>
         </Row>
+        <Row>
+          <Col>
+            <p className={["text-center", "mt-5"].join(" ")}>
+              Enjoy <a href="https://cascadiathreads.com">the shop</a>!
+            </p>
+          </Col>
+        </Row>
       </Container>
       <Container fluid style={{ backgroundColor: "#000" }} className="mt-5">
         <Container>
@@ -279,7 +286,7 @@ const CascadiaThreads = () => {
           </Row>
         </Container>
       </Container>
-      <NextContentPage title="Hop Fastpass" otherProject="/hop" />
+      <NextContentPage title="About Noel" otherProject="/about" />
     </Layout>
   )
 }
