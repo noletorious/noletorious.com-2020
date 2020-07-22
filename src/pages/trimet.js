@@ -133,7 +133,7 @@ const TriMet = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                TriMet's digital design system
+                TriMet's 2019 digital design system
               </a>
               .
             </p>
