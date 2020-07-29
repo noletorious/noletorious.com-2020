@@ -7,20 +7,11 @@ import Container from "react-bootstrap/Container"
 import Col from "react-bootstrap/Col"
 import Row from "react-bootstrap/Row"
 import Image from "gatsby-image"
-import styled from "styled-components"
-import useDarkMode from "use-dark-mode"
 import NextContentPage from "../components/NextContentPage"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons"
 
 const About = () => {
-  const darkMode = useDarkMode()
-  const TimelineDivider = styled.div`
-    width: 1px;
-    height: 25px;
-    border-left: 1px solid
-      ${darkMode.value ? "rgba(255, 255, 255, 0.25)" : "rgba(0, 0, 0, 0.25)"};
-  `
   const data = useStaticQuery(graphql`
     query {
       noel: file(relativePath: { eq: "noel-trimet.jpg" }) {

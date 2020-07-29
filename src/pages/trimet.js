@@ -204,7 +204,7 @@ const TriMet = () => {
           </Col>
         </Row>
         <Row>
-          <Col xs={{ span: 10, offset: 1 }} class="my-5">
+          <Col xs={{ span: 12 }} sm={{ span: 10, offset: 1 }} class="my-5">
             <Image
               fluid={data.trimetBlog.childImageSharp.fluid}
               className="rounded-lg"
