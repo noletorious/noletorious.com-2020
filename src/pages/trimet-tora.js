@@ -258,7 +258,7 @@ const TriMetArrivals = () => {
                 >
                   History
                 </h3>
-                <p className={["pb-5", "text-muted"].join(" ")}>
+                <p className={["pt-5", "pb-3", "text-muted"].join(" ")}>
                   The website has gone through major changes and it has been
                   based largely on rider-center design.{" "}
                   <a
