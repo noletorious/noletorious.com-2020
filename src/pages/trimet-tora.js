@@ -270,10 +270,12 @@ const TriMetArrivals = () => {
                   </a>{" "}
                   has gone through a series of updates over the years. Many
                   people around the Portland Metro area heavily rely on TriMet’s
-                  data to navigate and get around the city. Historically, TriMet
-                  has a solid reputation as a transit agency that openly works
-                  with other agencies around harnessing transit data digitally.
-                  .
+                  data to navigate and get around the city.
+                </p>
+                <p>
+                  Historically, TriMet has a solid reputation as a transit
+                  agency that openly works with other agencies around harnessing
+                  transit data digitally
                 </p>
               </div>
             </Col>
