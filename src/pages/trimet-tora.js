@@ -152,6 +152,30 @@ const TriMetArrivals = () => {
           }
         }
       }
+      toraFlowDiagram: file(relativePath: { eq: "tora/tora-screen-flow.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+          original {
+            src
+          }
+        }
+      }
+      competitors: file(relativePath: { eq: "tora/transit-competitors.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      captureData: file(relativePath: { eq: "tora/analytics-labels.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
       rosette: file(relativePath: { eq: "arrivals/rosette.png" }) {
         childImageSharp {
           fluid {
@@ -162,6 +186,7 @@ const TriMetArrivals = () => {
     }
   `)
   const flowAuditImage = data.audit.childImageSharp.original.src
+  const flowScreenImage = data.toraFlowDiagram.childImageSharp.original.src
   const RosetteImageWrap = styled.div`
     display: block;
     margin: 0 auto;
@@ -250,7 +275,6 @@ const TriMetArrivals = () => {
               >
                 <h3
                   className={[
-                    "mb-3",
                     "small",
                     "font-weight-bold",
                     "text-uppercase",
@@ -258,7 +282,7 @@ const TriMetArrivals = () => {
                 >
                   History
                 </h3>
-                <p className={["pt-5", "pb-3", "text-muted"].join(" ")}>
+                <p className={["pt-4", "pb-2", "text-muted"].join(" ")}>
                   The website has gone through major changes and it has been
                   based largely on rider-center design.{" "}
                   <a
@@ -272,7 +296,7 @@ const TriMetArrivals = () => {
                   people around the Portland Metro area heavily rely on TriMet’s
                   data to navigate and get around the city.
                 </p>
-                <p>
+                <p className={["text-muted"].join(" ")}>
                   Historically, TriMet has a solid reputation as a transit
                   agency that openly works with other agencies around harnessing
                   transit data digitally
@@ -282,7 +306,7 @@ const TriMetArrivals = () => {
           </Row>
         </Container>
         {/* trimet timeline */}
-        <Container fluid>
+        <Container>
           <Row className={["mb-5"].join(" ")}>
             <Col>
               <Image
@@ -477,20 +501,18 @@ const TriMetArrivals = () => {
                 <p className={["text-muted"].join(" ")}>
                   The goal of this project has the future and riders in mind.
                 </p>
-                <ol className={["text-muted"].join(" ")}>
-                  <li className="mb-1">
+                <OrderedList className={["text-muted"].join(" ")}>
+                  <li>
                     Upgrade current trip tools usability based on rider needs on
                     trimet.org leveraging trimet.org data and OTP mod
                     techonology.
                   </li>
-                  <li className="mb-1">
+                  <li>
                     Enhance underlying technology in order to continuously
                     scale.
                   </li>
-                  <li className="mb-1">
-                    Encourage users to take multimodal trips.
-                  </li>
-                </ol>
+                  <li>Encourage users to take multimodal trips.</li>
+                </OrderedList>
               </div>
             </Col>
           </Row>
@@ -499,7 +521,7 @@ const TriMetArrivals = () => {
         <Container>
           <Row className={["mb-5"].join(" ")}>
             <Col xs={{ span: 12 }} sm={{ span: 10, offset: 1 }}>
-              <h3 className={["mb-3"].join(" ")}>Process</h3>
+              <h3 className={["mb-3"].join(" ")}>Understanding the rider</h3>
               <div
                 className={[
                   "bg-gray",
@@ -686,11 +708,11 @@ const TriMetArrivals = () => {
             </Col>
           </Row>
         </Container>
-        {/* Process continued... */}
+        {/* Design */}
         <Container>
           <Row className={["my-5", "pt-5"].join(" ")}>
             <Col xs={{ span: 12 }} sm={{ span: 10, offset: 1 }}>
-              <h3 className={["mb-3"].join(" ")}>Process continued...</h3>
+              <h3 className={["mb-3"].join(" ")}>Design</h3>
               <div
                 className={[
                   "bg-gray",
@@ -723,8 +745,10 @@ const TriMetArrivals = () => {
                   user everything (Power user problem).{" "}
                 </p>
                 <p className={["text-muted", "small", "mb-5"].join(" ")}>
-                  [Image of UBER, LYFT, Google Maps, TransitApp, MoovitApp, and
-                  more]
+                  <Image
+                    fluid={data.competitors.childImageSharp.fluid}
+                    className="rounded-lg"
+                  />
                 </p>
                 <h3
                   className={[
@@ -785,11 +809,30 @@ const TriMetArrivals = () => {
                   navigating to one state to another easily, to mobile versus
                   desktop responsiveness.{" "}
                 </p>
-                <p className={["text-muted", "small", "mb-5"].join(" ")}>
-                  [Gif of prototype animations]
+                <p
+                  className={[
+                    "text-center",
+                    "text-muted",
+                    "small",
+                    "mt-5",
+                  ].join(" ")}
+                >
+                  High-level screen flow{" "}
+                  <a
+                    href={flowScreenImage}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FontAwesomeIcon icon={faExternalLinkAlt} />
+                  </a>
                 </p>
+                <Image
+                  fluid={data.toraFlowDiagram.childImageSharp.fluid}
+                  className="rounded-lg"
+                />
                 <h3
                   className={[
+                    "mt-5",
                     "mb-3",
                     "small",
                     "font-weight-bold",
@@ -805,9 +848,10 @@ const TriMetArrivals = () => {
                   configurable by the UX team was taken into consideration when
                   it was built.{" "}
                 </p>
-                <p className={["text-muted", "small", "mb-5"].join(" ")}>
-                  [Image of eventListeners list and Google Tag Manager]
-                </p>
+                <Image
+                  fluid={data.captureData.childImageSharp.fluid}
+                  className="rounded-lg"
+                />
               </div>
             </Col>
           </Row>
@@ -976,11 +1020,11 @@ const TriMetArrivals = () => {
                   type="button"
                   as="a"
                   className={["btn", "btn-lg"].join(" ")}
-                  href="https://trimet.org/newplanner"
+                  href="https://xd.adobe.com/view/cef25753-fbd1-4e9d-7bf1-c5bc3bff8219-b8c3/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  TriMet Re-Architecture Project Page
+                  TriMet Redesign Adobe XD Prototype
                 </ToProtoButton>
               </div>
             </Col>
