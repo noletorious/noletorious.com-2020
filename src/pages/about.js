@@ -84,10 +84,10 @@ const About = () => {
             <Row>
               <Col xs={{ span: 12 }} sm={{ span: 10, offset: 1 }}>
                 <p className={["my-5"].join(" ")}>
-                  Full-stack designer originally from Kauai, Hawaii currently in
-                  Portland, Oregon. Throughout my life I've developed a love for
-                  creating good, practical, elegant, usable solutions within the
-                  realm of interaction and interface design.
+                  Designer originally from Kauai, Hawaii currently in Portland,
+                  Oregon. Throughout my life I've developed a love for creating
+                  good, practical, elegant, usable solutions within the realm of
+                  interaction and interface design.
                 </p>
                 <h2
                   className={[
