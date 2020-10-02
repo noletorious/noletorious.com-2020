@@ -66,7 +66,7 @@ const TriMet = () => {
           }
         }
       }
-      trimetOTPPreview: file(relativePath: { eq: "trimet-otp-preview.png" }) {
+      trimetOTPPreview: file(relativePath: { eq: "tora/tora-home.png" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid

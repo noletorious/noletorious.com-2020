@@ -223,7 +223,7 @@ const TriMetArrivals = () => {
     <Layout>
       <Container fluid>
         {/* Intro */}
-        <Container className="py-5">
+        <Container className={["pt-5", "pb-3"].join(" ")}>
           <Row>
             <Col className={["d-flex", "flex-column", "text-center"].join(" ")}>
               <RosetteImageWrap>
@@ -242,14 +242,14 @@ const TriMetArrivals = () => {
         </Container>
         {/* Intro devices */}
         <Container fluid>
-          <Row>
-            <Col xs={{ span: 6 }}>
+          <Row className={["mb-3"].join(" ")}>
+            <Col xs={{ span: 3, offset: 3 }}>
               <Image
                 fluid={data.currentHome.childImageSharp.fluid}
                 className="rounded-lg"
               />
             </Col>
-            <Col xs={{ span: 6 }}>
+            <Col xs={{ span: 3 }}>
               <Image
                 fluid={data.toraHome.childImageSharp.fluid}
                 className="rounded-lg"
@@ -283,8 +283,6 @@ const TriMetArrivals = () => {
                   History
                 </h3>
                 <p className={["pt-4", "pb-2", "text-muted"].join(" ")}>
-                  The website has gone through major changes and it has been
-                  based largely on rider-center design.{" "}
                   <a
                     href="https://trimet.org/"
                     target="_blank"
@@ -292,14 +290,17 @@ const TriMetArrivals = () => {
                   >
                     TriMet.org
                   </a>{" "}
-                  has gone through a series of updates over the years. Many
-                  people around the Portland Metro area heavily rely on TriMet’s
-                  data to navigate and get around the city.
+                  has gone through a series of updates over the years and has
+                  slowly transformed into an interface that reflects what
+                  information people want most that is within reason of the
+                  technology at the time.
                 </p>
                 <p className={["text-muted"].join(" ")}>
-                  Historically, TriMet has a solid reputation as a transit
-                  agency that openly works with other agencies around harnessing
-                  transit data digitally
+                  Historically, TriMet has a solid reputation as a public
+                  transit agency collaborating with other organizations around
+                  leveraging their data openly. The website re-architecture also
+                  parallels a larger nation wide effort to unify new features
+                  that surface as more transit data points emerge.
                 </p>
               </div>
             </Col>
@@ -458,8 +459,8 @@ const TriMetArrivals = () => {
                   >
                     OpenStreetMap
                   </a>{" "}
-                  to push the multimodal effort, unifying the trip planner data
-                  architecture in the United States. The OTP follows the{" "}
+                  effort to openly create a trip planner data architecture with
+                  multimodal capability. The TriMet OTP-mod also leverages the{" "}
                   <a
                     href="https://gtfs.org/"
                     target="_blank"
@@ -467,7 +468,7 @@ const TriMetArrivals = () => {
                   >
                     General Transit Feed Specification
                   </a>{" "}
-                  that was also lead by TriMet and Google's GIS team.
+                  that was initially lead by TriMet and Google's GIS team.
                 </p>
               </div>
             </Col>
@@ -477,6 +478,7 @@ const TriMetArrivals = () => {
         <Container>
           <Row className={["mb-5"].join(" ")}>
             <Col xs={{ span: 12 }} sm={{ span: 10, offset: 1 }}>
+              <h3 className={["mb-3"].join(" ")}>Goals</h3>
               <div
                 className={[
                   "bg-gray",
@@ -488,6 +490,9 @@ const TriMetArrivals = () => {
                   "g-rounded",
                 ].join(" ")}
               >
+                <p className={["text-muted", "mb-4"].join(" ")}>
+                  The goal of this project has the future and riders in mind.
+                </p>
                 <h3
                   className={[
                     "mb-3",
@@ -496,22 +501,45 @@ const TriMetArrivals = () => {
                     "text-uppercase",
                   ].join(" ")}
                 >
-                  Project's Business Goals
+                  TriMet's Business Goals
                 </h3>
-                <p className={["text-muted"].join(" ")}>
-                  The goal of this project has the future and riders in mind.
-                </p>
+
                 <OrderedList className={["text-muted"].join(" ")}>
                   <li>
-                    Upgrade current trip tools usability based on rider needs on
-                    trimet.org leveraging trimet.org data and OTP mod
+                    Upgrade the user experience on current trip tools based on
+                    rider needs leveraging trimet.org data and OTP mod
                     techonology.
                   </li>
                   <li>
-                    Enhance underlying technology in order to continuously
-                    scale.
+                    Enhance underlying technology in order to continuously scale
+                    as a long term investment.
                   </li>
                   <li>Encourage users to take multimodal trips.</li>
+                </OrderedList>
+                <h3
+                  className={[
+                    "mb-3",
+                    "small",
+                    "font-weight-bold",
+                    "text-uppercase",
+                  ].join(" ")}
+                >
+                  Rider/Marketing Communications Goals
+                </h3>
+                <p className={["text-muted"].join(" ")}></p>
+                <OrderedList className={["text-muted"].join(" ")}>
+                  <li>
+                    Help, not hype. Provide riders what they want and support
+                    them through the entire customer journey.
+                  </li>
+                  <li>
+                    Connect, empower, delight with TriMet's new brand voice and
+                    brand identity.
+                  </li>
+                  <li>
+                    In app, build trust, develop relationships while growing
+                    Riders Club.
+                  </li>
                 </OrderedList>
               </div>
             </Col>
@@ -541,7 +569,7 @@ const TriMetArrivals = () => {
                     "text-uppercase",
                   ].join(" ")}
                 >
-                  Research
+                  User Research
                 </h3>
                 <Image
                   fluid={data.trimetProcess.childImageSharp.fluid}
@@ -571,9 +599,9 @@ const TriMetArrivals = () => {
                   <ListItem>Social media and other rider feedback</ListItem>
                 </UnorderedList>
                 <p className={["my-4", "pb-4", "text-muted"].join(" ")}>
-                  Our Audience Segmentation Survey Research Report the team
-                  helped us identified 4 main rider personas. Generally everyone
-                  falls in to one of these categories:
+                  Our Audience Segmentation Survey Research Report helped us
+                  identify 4 main rider personas. Generally, anyone can fall in
+                  to one of these general categories:
                 </p>
                 <Row>
                   <RiderCol className="border">
@@ -853,6 +881,122 @@ const TriMetArrivals = () => {
                   className="rounded-lg"
                 />
               </div>
+            </Col>
+          </Row>
+        </Container>
+        {/* Design Challenges */}
+        <Container>
+          <Row className={[].join(" ")}>
+            <Col xs={{ span: 12 }} sm={{ span: 10, offset: 1 }}>
+              <h3 className={["mb-3"].join(" ")}>A Few Design Challenges</h3>
+              <div
+                className={[
+                  "bg-gray",
+                  "pt-5",
+                  "px-sm-5",
+                  "px-3",
+                  "pb-4",
+                  "border",
+                  "g-rounded",
+                ].join(" ")}
+              >
+                <h3
+                  className={[
+                    "small",
+                    "font-weight-bold",
+                    "text-uppercase",
+                  ].join(" ")}
+                >
+                  Exploring Layouts
+                </h3>
+                <p className={["pt-4", "pb-2", "text-muted"].join(" ")}>
+                  Talk about and show the different routes you explored...
+                </p>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+        <Container fluid>
+          <Row>
+            <Col>
+              <p>[Include full width images here]</p>
+            </Col>
+          </Row>
+        </Container>
+        <Container>
+          <Row className={[].join(" ")}>
+            <Col xs={{ span: 12 }} sm={{ span: 10, offset: 1 }}>
+              <div
+                className={[
+                  "bg-gray",
+                  "pt-5",
+                  "px-sm-5",
+                  "px-3",
+                  "pb-4",
+                  "border",
+                  "g-rounded",
+                ].join(" ")}
+              >
+                <h3
+                  className={[
+                    "small",
+                    "font-weight-bold",
+                    "text-uppercase",
+                  ].join(" ")}
+                >
+                  Working with first/last mile problematic use cases
+                </h3>
+                <p className={["pt-4", "pb-2", "text-muted"].join(" ")}>
+                  Talk about the use cases we had to surface to IT to 1.
+                  understand how it works 2. suggest or align on a next step
+                  solution
+                </p>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+        <Container fluid>
+          <Row>
+            <Col>
+              <p>[Include full width images here]</p>
+            </Col>
+          </Row>
+        </Container>
+        <Container>
+          <Row className={[].join(" ")}>
+            <Col xs={{ span: 12 }} sm={{ span: 10, offset: 1 }}>
+              <div
+                className={[
+                  "bg-gray",
+                  "pt-5",
+                  "px-sm-5",
+                  "px-3",
+                  "pb-4",
+                  "border",
+                  "g-rounded",
+                ].join(" ")}
+              >
+                <h3
+                  className={[
+                    "small",
+                    "font-weight-bold",
+                    "text-uppercase",
+                  ].join(" ")}
+                >
+                  Implementing a better Trip Mode selection state
+                </h3>
+                <p className={["pt-4", "pb-2", "text-muted"].join(" ")}>
+                  Talk the improvements and show the iterations of different
+                  designs for picking a mode selection for a trip.
+                </p>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+        <Container fluid>
+          <Row>
+            <Col>
+              <p>[Include full width images here]</p>
             </Col>
           </Row>
         </Container>
