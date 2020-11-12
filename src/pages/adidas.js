@@ -70,8 +70,9 @@ const AdidasPage = () => {
                 >
                   <AdidasLogo
                     className={["w-75", "mx-auto", "d-block"].join(" ")}
+                    style={{ marginBottom: "-12px" }}
                   />
-                  <p style={{ fontSize: "1.75em" }}>X</p>
+                  <p style={{ fontSize: "1.75em", color: "#000" }}>X</p>
                   <h1 style={{ fontSize: "2em" }}>
                     <span className={["bg-dark-black"].join(" ")}>
                       NOEL TORRES
@@ -104,13 +105,17 @@ const AdidasPage = () => {
                     style={{ marginTop: "-8px" }}
                   >
                     <span className={["bg-dark-black"].join(" ")}>
-                      RELEVANT
+                      UI/MOTION DESIGNER
                     </span>
                   </h5>
                   <p className={["small"].join(" ")}></p>
                   <UnorderedList>
                     <UnorderedListItem>
                       <SpanDivider>TriMet</SpanDivider>
+                      <Link to="/trimet#proofofconcept">
+                        Progressive Web App POC
+                      </Link>
+                      ,{" "}
                       <a
                         href="https://www.youtube.com/watch?v=Cld-NITIMwo"
                         target="_blank"
@@ -119,22 +124,60 @@ const AdidasPage = () => {
                         New Service Flythrough
                       </a>
                       ,{" "}
-                      <Link to="/trimet#proofofconcept">
-                        Progressive Web App POC
+                      <a
+                        href="https://twitter.com/trimet/status/1316881653474578432"
+                        target="_blank"
+                        alt="Airflow on MAX"
+                      >
+                        Airflow on MAX
+                      </a>
+                      , <Link to="/arrivals">Arrivals App Case Study</Link>
+                    </UnorderedListItem>
+                    <UnorderedListItem>
+                      <SpanDivider>Hop Fastpass</SpanDivider>{" "}
+                      <Link to="/hop#whatsmyfare">
+                        Ways to pay questionnaire
                       </Link>
-                      , Airflow on MAX, Arrivals App Case Study
+                      ,{" "}
+                      <a
+                        href="https://myhopcard.com/home/"
+                        target="_blank"
+                        alt="Hop Fastpass"
+                      >
+                        Website Animations
+                      </a>
+                      ,{" "}
+                      <Link to="/hop#hopanimations">
+                        Launch Commercials / Marketing Animations
+                      </Link>
+                      ,{" "}
+                      <Link to="/hop#vcvalidator">
+                        Animated Hopster on Virtual Card
+                      </Link>
                     </UnorderedListItem>
                     <UnorderedListItem>
-                      <SpanDivider>Hop Fastpass</SpanDivider> Ways to pay
-                      questionnaire, Website Animations, Launch Commercials,
-                      Animated Hopster on Virtual Card
+                      <SpanDivider>Cascadia Threads</SpanDivider>{" "}
+                      <Link to="cascadiathreads/#animations">
+                        Marketing Animations
+                      </Link>
+                      ,{" "}
+                      <a
+                        href="https://instagram/cascadiathreads"
+                        target="_blank"
+                        alt="Instagram: @cascadiathreads"
+                      >
+                        Apparel Photography
+                      </a>
                     </UnorderedListItem>
                     <UnorderedListItem>
-                      <SpanDivider>Cascadia Threads</SpanDivider> Marketing
-                      Animations
-                    </UnorderedListItem>
-                    <UnorderedListItem>
-                      <SpanDivider>Older Work</SpanDivider> Rappers Favorite
+                      <SpanDivider>Older Work</SpanDivider>{" "}
+                      <a
+                        href="https://dribbble.com/shots/3202015-Rappers-Favorite-Website/attachments/3202015-Rappers-Favorite-Website?mode=media"
+                        target="_blank"
+                        alt="Dribbble Rappers Favorite Idea"
+                      >
+                        Rappers Favorite
+                      </a>
                     </UnorderedListItem>
                   </UnorderedList>
                 </div>

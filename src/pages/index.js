@@ -137,7 +137,11 @@ const IndexPage = () => {
               Product / Interaction / Motion Designer
             </p>
             <div className={["d-block", "text-center", "my-5"].join(" ")}>
-              <Scrollchor to="#work" id="work" className="text-center">
+              <Scrollchor
+                to="#work"
+                id="work"
+                className={["text-center", "no-decoration"].join(" ")}
+              >
                 <FontAwesomeIcon icon={faLongArrowAltDown} size="2x" />
               </Scrollchor>
             </div>

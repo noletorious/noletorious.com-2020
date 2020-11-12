@@ -196,7 +196,7 @@ const CascadiaThreads = () => {
             />
           </Col>
         </Row>
-        <Row>
+        <Row id="animations">
           <Col>
             <p className={captionText()}>Design: Apparel / Motion</p>
           </Col>

@@ -83,7 +83,7 @@ const Hop = () => {
             <p className={captionText()}>Go-to hand model.</p>
           </Col>
         </Row>
-        <Row>
+        <Row id="whatsmyfare">
           <Col xs={{ span: 6 }}>
             <Image
               fluid={data.hopWhatsMyFare.childImageSharp.fluid}
@@ -181,7 +181,7 @@ const Hop = () => {
         </Row>
       </Container>
       <Container>
-        <Row>
+        <Row id="hopanimations">
           <Col sm={{ span: 6 }}>
             <video
               loop
@@ -235,7 +235,7 @@ const Hop = () => {
           <Col sm={{ span: 12 }} className="mb-5"></Col>
         </Row>
       </Container>
-      <Container style={{ backgroundColor: "#0f0f0f" }} fluid>
+      <Container style={{ backgroundColor: "#0f0f0f" }} fluid id="vcvalidator">
         <Row>
           <Col
             xs={{ span: 4, offset: 4 }}
