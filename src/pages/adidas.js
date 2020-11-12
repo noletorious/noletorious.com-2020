@@ -61,7 +61,9 @@ const AdidasPage = () => {
                   "justify-content-center",
                   "justify-content-sm-end",
                   "pr-0",
-                  "pr-sm-5",
+                  "mr-0",
+                  "pr-md-5",
+                  "mr-md-5",
                 ].join(" ")}
               >
                 <div
