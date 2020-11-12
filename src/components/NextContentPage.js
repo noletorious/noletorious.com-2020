@@ -23,7 +23,7 @@ const NextContentPage = ({ otherProject, title }) => {
         <Col>
           <p className={["text-right", "mb-0"].join(" ")}>
             <Link to={otherProject}>
-              Next: {title} <FontAwesomeIcon icon={faLongArrowAltRight} />
+              {title} <FontAwesomeIcon icon={faLongArrowAltRight} />
             </Link>
           </p>
         </Col>

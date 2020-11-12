@@ -51,7 +51,7 @@ const ProjectHeader = ({
             <p>
               <Accordion.Toggle
                 eventKey="0"
-                className={["impact-link"].join(" ")}
+                className={["impact-link", "no-decoration"].join(" ")}
               >
                 {jobTitle}{" "}
                 <FontAwesomeIcon
