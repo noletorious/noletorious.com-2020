@@ -42,7 +42,7 @@ const AdidasPage = () => {
   `
   return (
     <Layout>
-      <SEO title="Adidas - UI Designer" />
+      <SEO title="Adidas - UI Motion Designer" />
       <GradientContainer className={["h-s-100"].join(" ")}>
         <Container className={["h-100"].join(" ")} fluid>
           <Row className={["h-100"].join(" ")}>
@@ -115,7 +115,7 @@ const AdidasPage = () => {
                     style={{ marginTop: "-8px" }}
                   >
                     <span className={["bg-dark-black"].join(" ")}>
-                      UI/MOTION DESIGNER
+                      UI MOTION DESIGNER
                     </span>
                   </h5>
                   <p className={["small"].join(" ")}></p>
@@ -172,7 +172,7 @@ const AdidasPage = () => {
                       </Link>
                       ,{" "}
                       <a
-                        href="https://instagram/cascadiathreads"
+                        href="https://instagram.com/cascadiathreads"
                         target="_blank"
                         alt="Instagram: @cascadiathreads"
                       >
