@@ -198,14 +198,6 @@ const AdidasPage = () => {
                       >
                         Rappers Favorite
                       </a>
-                      ,{" "}
-                      <a
-                        href="https://dribbble.com/shots/3202015-Rappers-Favorite-Website/attachments/3202015-Rappers-Favorite-Website?mode=media"
-                        target="_blank"
-                        alt="Past Portfolio"
-                      >
-                        Rappers Favorite
-                      </a>
                     </UnorderedListItem>
                   </UnorderedList>
                 </div>
