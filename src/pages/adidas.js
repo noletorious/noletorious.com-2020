@@ -151,7 +151,8 @@ const AdidasPage = () => {
                       >
                         Airflow on MAX
                       </a>
-                      , <Link to="/arrivals">Arrivals App Case Study</Link>
+                      ,{" "}
+                      <Link to="/trimet-arrivals">Arrivals App Case Study</Link>
                     </UnorderedListItem>
                     <UnorderedListItem>
                       <SpanDivider>Hop Fastpass</SpanDivider>{" "}
