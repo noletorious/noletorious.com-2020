@@ -137,7 +137,7 @@ const AdidasPage = () => {
                       </a>
                       /
                       <a
-                        href="https://www.youtube.com/watch?v=BO72XAPARzM&list=PLtJW_Q-z9fw8Q2b5tdBReibFKAVfOJEy6"
+                        href="https://www.youtube.com/watch?v=fSDKlqbV_DI&list=PLtJW_Q-z9fw8Q2b5tdBReibFKAVfOJEy6&index=3"
                         target="_blank"
                         alt=""
                       >
