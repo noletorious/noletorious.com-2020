@@ -80,10 +80,12 @@ const Hop = () => {
               fluid={data.hopTap.childImageSharp.fluid}
               className={["rounded-lg"].join(" ")}
             />
-            <p className={captionText()}>Go-to hand model.</p>
+            <p className={captionText()} id="whatsmyfare">
+              Go-to hand model.
+            </p>
           </Col>
         </Row>
-        <Row id="whatsmyfare">
+        <Row>
           <Col xs={{ span: 6 }}>
             <Image
               fluid={data.hopWhatsMyFare.childImageSharp.fluid}
