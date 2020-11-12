@@ -133,7 +133,15 @@ const AdidasPage = () => {
                         target="_blank"
                         alt=""
                       >
-                        New Service Flythrough
+                        SW Corridor Fly-though
+                      </a>
+                      /
+                      <a
+                        href="https://www.youtube.com/watch?v=BO72XAPARzM&list=PLtJW_Q-z9fw8Q2b5tdBReibFKAVfOJEy6"
+                        target="_blank"
+                        alt=""
+                      >
+                        New Service Fly-throughs Playlist
                       </a>
                       ,{" "}
                       <a
@@ -187,6 +195,14 @@ const AdidasPage = () => {
                         href="https://dribbble.com/shots/3202015-Rappers-Favorite-Website/attachments/3202015-Rappers-Favorite-Website?mode=media"
                         target="_blank"
                         alt="Dribbble Rappers Favorite Idea"
+                      >
+                        Rappers Favorite
+                      </a>
+                      ,{" "}
+                      <a
+                        href="https://dribbble.com/shots/3202015-Rappers-Favorite-Website/attachments/3202015-Rappers-Favorite-Website?mode=media"
+                        target="_blank"
+                        alt="Past Portfolio"
                       >
                         Rappers Favorite
                       </a>
