@@ -49,6 +49,7 @@ const AdidasPage = () => {
             <Col
               xs={{ span: 12 }}
               sm={{ span: 6 }}
+              md={{ span: 5, offset: 1 }}
               className={["h-100"].join(" ")}
             >
               <div
@@ -64,9 +65,13 @@ const AdidasPage = () => {
                 ].join(" ")}
               >
                 <div
-                  className={["d-flex", "flex-column", "py-5", "py-sm-5"].join(
-                    " "
-                  )}
+                  className={[
+                    "d-flex",
+                    "flex-column",
+                    "pb-0",
+                    "pt-sm-5",
+                    "pb-sm-5",
+                  ].join(" ")}
                 >
                   <AdidasLogo
                     className={["w-75", "mx-auto", "d-block"].join(" ")}
@@ -81,7 +86,12 @@ const AdidasPage = () => {
                 </div>
               </div>
             </Col>
-            <Col xs={{ span: 12 }} sm={{ span: 6 }} md={{ span: 4 }}>
+            <Col
+              xs={{ span: 12 }}
+              sm={{ span: 5 }}
+              md={{ span: 5 }}
+              lg={{ span: 4 }}
+            >
               <div
                 className={[
                   "d-flex",
@@ -151,7 +161,7 @@ const AdidasPage = () => {
                         Launch Commercials / Marketing Animations
                       </Link>
                       ,{" "}
-                      <Link to="/hop#vcvalidator">
+                      <Link to="/hop#hopanimations">
                         Animated Hopster on Virtual Card
                       </Link>
                     </UnorderedListItem>
