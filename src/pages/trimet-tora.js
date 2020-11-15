@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 import Layout from "../components/layout"
@@ -18,8 +18,11 @@ import {
 } from "@fortawesome/free-solid-svg-icons"
 import NextContentPage from "../components/NextContentPage"
 
-const TriMetArrivals = () => {
-  useDarkMode(true)
+const TriMetTora = () => {
+  const darkMode = useDarkMode()
+  useEffect(() => {
+    darkMode.disable()
+  }, [])
 
   const data = useStaticQuery(graphql`
     query {
@@ -1177,4 +1180,4 @@ const TriMetArrivals = () => {
   )
 }
 
-export default TriMetArrivals
+export default TriMetTora

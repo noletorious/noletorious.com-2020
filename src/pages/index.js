@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import Img from "gatsby-image"
@@ -13,6 +13,10 @@ import Scrollchor from "react-scrollchor"
 import ReusableCard from "../components/ReuseableCard"
 
 const IndexPage = () => {
+  const darkMode = useDarkMode()
+  useEffect(() => {
+    darkMode.disable()
+  }, [])
   const data = useStaticQuery(graphql`
     query {
       noelFront: file(relativePath: { eq: "noel-trimet-square.jpg" }) {
