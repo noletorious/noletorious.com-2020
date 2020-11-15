@@ -132,6 +132,8 @@ const AdidasPage = () => {
                         href="https://www.youtube.com/watch?v=Cld-NITIMwo"
                         target="_blank"
                         alt=""
+                        without
+                        rel="noopener noreferrer"
                       >
                         SW Corridor Fly-though
                       </a>
@@ -140,6 +142,8 @@ const AdidasPage = () => {
                         href="https://www.youtube.com/watch?v=fSDKlqbV_DI&list=PLtJW_Q-z9fw8Q2b5tdBReibFKAVfOJEy6&index=3"
                         target="_blank"
                         alt=""
+                        without
+                        rel="noopener noreferrer"
                       >
                         New Service Fly-throughs Playlist
                       </a>
@@ -148,6 +152,8 @@ const AdidasPage = () => {
                         href="https://twitter.com/trimet/status/1316881653474578432"
                         target="_blank"
                         alt="Airflow on MAX"
+                        without
+                        rel="noopener noreferrer"
                       >
                         Airflow on MAX
                       </a>
@@ -164,6 +170,8 @@ const AdidasPage = () => {
                         href="https://myhopcard.com/home/"
                         target="_blank"
                         alt="Hop Fastpass"
+                        without
+                        rel="noopener noreferrer"
                       >
                         Website Animations
                       </a>
@@ -186,6 +194,8 @@ const AdidasPage = () => {
                         href="https://instagram.com/cascadiathreads"
                         target="_blank"
                         alt="Instagram: @cascadiathreads"
+                        without
+                        rel="noopener noreferrer"
                       >
                         Apparel Photography
                       </a>
@@ -196,6 +206,8 @@ const AdidasPage = () => {
                         href="https://dribbble.com/shots/3202015-Rappers-Favorite-Website/attachments/3202015-Rappers-Favorite-Website?mode=media"
                         target="_blank"
                         alt="Dribbble Rappers Favorite Idea"
+                        without
+                        rel="noopener noreferrer"
                       >
                         Rappers Favorite
                       </a>

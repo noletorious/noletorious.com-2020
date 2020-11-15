@@ -7,8 +7,7 @@ import Toggle from "./Toggle"
 import useDarkMode from "use-dark-mode"
 
 const DarkModeToggle = () => {
-  const darkMode = useDarkMode(true)
-
+  const darkMode = useDarkMode()
   return (
     <div className="dark-mode-toggle">
       <button type="button" onClick={darkMode.disable}>

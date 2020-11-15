@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 import Layout from "../components/layout"
@@ -19,11 +19,8 @@ import {
 import NextContentPage from "../components/NextContentPage"
 
 const TriMetArrivals = () => {
-  const darkMode = useDarkMode(true)
-  useEffect(() => {
-    console.log("useEffect")
-    darkMode.disable()
-  }, [])
+  useDarkMode(true)
+
   const data = useStaticQuery(graphql`
     query {
       arrivalsxd: file(

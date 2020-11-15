@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 import Layout from "../components/layout"
@@ -25,11 +25,7 @@ import LRFSTVWebm from "../images/arrivals/LRFSTV.webm"
 import TVDMWebm from "../images/arrivals/TVDM.webm"
 
 const TriMetArrivals = () => {
-  const darkMode = useDarkMode(true)
-  useEffect(() => {
-    console.log("useEffect")
-    darkMode.disable()
-  }, [])
+  useDarkMode(false)
   const data = useStaticQuery(graphql`
     query {
       arrivalsxd: file(
