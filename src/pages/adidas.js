@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Link } from "gatsby"
@@ -7,8 +7,13 @@ import Col from "react-bootstrap/Col"
 import Row from "react-bootstrap/Row"
 import styled from "styled-components"
 import AdidasLogo from "../images/adidas/Adidas_Logo.svg"
+import useDarkMode from "use-dark-mode"
 
 const AdidasPage = () => {
+  const darkMode = useDarkMode()
+  useEffect(() => {
+    darkMode.enable()
+  })
   const GradientContainer = styled.div`
     background: linear-gradient(-45deg, #9359ff, #fffc59, #23a6d5, #23d5ab);
     background-size: 400% 400%;
