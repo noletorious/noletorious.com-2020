@@ -26,8 +26,8 @@ import useDarkMode from "use-dark-mode"
 const TriMetArrivals = () => {
   const darkMode = useDarkMode()
   useEffect(() => {
-    return darkMode.value ? darkMode.disable() : null
-  }, [])
+    return darkMode.value ? darkMode.disable() : undefined
+  })
   const data = useStaticQuery(graphql`
     query {
       arrivalsxd: file(

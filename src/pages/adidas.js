@@ -140,7 +140,10 @@ const AdidasPage = () => {
                         style={{ marginTop: "-8px" }}
                       >
                         <span className={["bg-dark-black"].join(" ")}>
-                          👽 UI MOTION DESIGNER
+                          <span role="img" aria-label>
+                            👽
+                          </span>{" "}
+                          UI MOTION DESIGNER
                         </span>
                       </h5>
                       <p className={["small"].join(" ")}></p>

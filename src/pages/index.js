@@ -13,11 +13,17 @@ import Scrollchor from "react-scrollchor"
 import useDarkMode from "use-dark-mode"
 import ReusableCard from "../components/ReuseableCard"
 
+const NoelImageWrap = styled.div`
+  max-width: 125px;
+  width: 125px;
+  margin: 2em auto;
+`
+
 const IndexPage = () => {
   const darkMode = useDarkMode()
   useEffect(() => {
     return !darkMode.value
-      ? darkMode.disable()
+      ? darkMode.enable()
       : console.log("Should be dark: " + darkMode.value)
   }, [])
 
@@ -85,12 +91,6 @@ const IndexPage = () => {
       }
     }
   `)
-
-  const NoelImageWrap = styled.div`
-    max-width: 125px;
-    width: 125px;
-    margin: 2em auto;
-  `
 
   const trimetImage = data.trimet.childImageSharp.original.src
   const attensaImage = data.attensa.childImageSharp.original.src
