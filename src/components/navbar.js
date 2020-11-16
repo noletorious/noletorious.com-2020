@@ -4,18 +4,18 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 import PropTypes from "prop-types"
 import Navbar from "react-bootstrap/Navbar"
 import Nav from "react-bootstrap/Nav"
-import useDarkMode from "use-dark-mode"
 import DarkModeToggle from "./DarkModeToggle"
 import styled from "styled-components"
 import ScrollChor from "react-scrollchor"
 import { Location } from "@reach/router"
+import useDarkMode from "use-dark-mode"
 
 const TheNavBarBrand = styled(Navbar.Brand)`
   margin-right: 0;
 `
 
 const TheNavBar = () => {
-  const darkMode = useDarkMode(false)
+  const darkMode = useDarkMode()
   const imgData = useStaticQuery(graphql`
     query {
       placeholderImage: file(

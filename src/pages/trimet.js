@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import Container from "react-bootstrap/Container"
@@ -20,8 +20,14 @@ import pocTTmp4 from "../images/poc-animations/trimet-triptools.mp4"
 import pocTTwebm from "../images/poc-animations/trimet-triptools.webm"
 import pocUAmp4 from "../images/poc-animations/trimet-useraccounts.mp4"
 import pocUAwebm from "../images/poc-animations/trimet-useraccounts.webm"
+import useDarkMode from "use-dark-mode"
 
 const TriMet = () => {
+  const darkMode = useDarkMode()
+  useEffect(() => {
+    return darkMode.value ? darkMode.disable() : null
+  }, [])
+
   const data = useStaticQuery(graphql`
     query {
       homes: file(relativePath: { eq: "arrivals/homes.png" }) {
@@ -204,7 +210,7 @@ const TriMet = () => {
           </Col>
         </Row>
         <Row>
-          <Col xs={{ span: 12 }} sm={{ span: 10, offset: 1 }} class="my-5">
+          <Col xs={{ span: 12 }} sm={{ span: 10, offset: 1 }} className="my-5">
             <Image
               fluid={data.trimetBlog.childImageSharp.fluid}
               className="rounded-lg"

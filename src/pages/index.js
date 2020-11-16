@@ -10,13 +10,17 @@ import Container from "react-bootstrap/Container"
 import Col from "react-bootstrap/Col"
 import Row from "react-bootstrap/Row"
 import Scrollchor from "react-scrollchor"
+import useDarkMode from "use-dark-mode"
 import ReusableCard from "../components/ReuseableCard"
 
 const IndexPage = () => {
   const darkMode = useDarkMode()
   useEffect(() => {
-    darkMode.disable()
+    return !darkMode.value
+      ? darkMode.disable()
+      : console.log("Should be dark: " + darkMode.value)
   }, [])
+
   const data = useStaticQuery(graphql`
     query {
       noelFront: file(relativePath: { eq: "noel-trimet-square.jpg" }) {

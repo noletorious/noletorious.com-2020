@@ -8,12 +8,15 @@ import Row from "react-bootstrap/Row"
 import styled from "styled-components"
 import AdidasLogo from "../images/adidas/Adidas_Logo.svg"
 import useDarkMode from "use-dark-mode"
+import Tilt from "react-tilt"
 
 const AdidasPage = () => {
   const darkMode = useDarkMode()
   useEffect(() => {
-    darkMode.enable()
-  })
+    return !darkMode.value
+      ? darkMode.enable()
+      : console.log("Should be dark: " + darkMode.value)
+  }, [])
   const GradientContainer = styled.div`
     background: linear-gradient(-45deg, #9359ff, #fffc59, #23a6d5, #23d5ab);
     background-size: 400% 400%;
@@ -109,116 +112,141 @@ const AdidasPage = () => {
                   "justify-content-sm-start",
                 ].join(" ")}
               >
-                <div
-                  className={[
-                    "d-flex",
-                    "flex-column",
-                    "px-3",
-                    "bg-whiteblack",
-                  ].join(" ")}
+                <Tilt
+                  className="Tilt"
+                  options={{
+                    reverse: false, // reverse the tilt direction
+                    max: 35, // max tilt rotation (degrees)
+                    perspective: 1000, // Transform perspective, the lower the more extreme the tilt gets.
+                    scale: 1.1, // 2 = 200%, 1.5 = 150%, etc..
+                    speed: 1000, // Speed of the enter/exit transition
+                    transition: true, // Set a transition on enter/exit.
+                    axis: null, // What axis should be disabled. Can be X or Y.
+                    reset: true, // If the tilt effect has to be reset on exit.
+                    easing: "cubic-bezier(.03,.98,.52,.99)", // Easing on enter/exit.
+                  }}
                 >
-                  <h5
-                    className={["text-center", "small"].join(" ")}
-                    style={{ marginTop: "-8px" }}
-                  >
-                    <span className={["bg-dark-black"].join(" ")}>
-                      UI MOTION DESIGNER
-                    </span>
-                  </h5>
-                  <p className={["small"].join(" ")}></p>
-                  <UnorderedList>
-                    <UnorderedListItem>
-                      <SpanDivider>TriMet</SpanDivider>
-                      <Link to="/trimet#proofofconcept">
-                        Progressive Web App POC
-                      </Link>
-                      ,{" "}
-                      <a
-                        href="https://www.youtube.com/watch?v=Cld-NITIMwo"
-                        target="_blank"
-                        alt=""
-                        without
-                        rel="noopener noreferrer"
+                  <div className="Tilt-inner">
+                    <div
+                      className={[
+                        "d-flex",
+                        "flex-column",
+                        "px-3",
+                        "bg-whiteblack",
+                      ].join(" ")}
+                    >
+                      <h5
+                        className={["text-center", "small"].join(" ")}
+                        style={{ marginTop: "-8px" }}
                       >
-                        SW Corridor Fly-though
-                      </a>
-                      /
-                      <a
-                        href="https://www.youtube.com/watch?v=fSDKlqbV_DI&list=PLtJW_Q-z9fw8Q2b5tdBReibFKAVfOJEy6&index=3"
-                        target="_blank"
-                        alt=""
-                        without
-                        rel="noopener noreferrer"
-                      >
-                        New Service Fly-throughs Playlist
-                      </a>
-                      ,{" "}
-                      <a
-                        href="https://twitter.com/trimet/status/1316881653474578432"
-                        target="_blank"
-                        alt="Airflow on MAX"
-                        without
-                        rel="noopener noreferrer"
-                      >
-                        Airflow on MAX
-                      </a>
-                      ,{" "}
-                      <Link to="/trimet-arrivals">Arrivals App Case Study</Link>
-                    </UnorderedListItem>
-                    <UnorderedListItem>
-                      <SpanDivider>Hop Fastpass</SpanDivider>{" "}
-                      <Link to="/hop#whatsmyfare">
-                        Ways to pay questionnaire
-                      </Link>
-                      ,{" "}
-                      <a
-                        href="https://myhopcard.com/home/"
-                        target="_blank"
-                        alt="Hop Fastpass"
-                        without
-                        rel="noopener noreferrer"
-                      >
-                        Website Animations
-                      </a>
-                      ,{" "}
-                      <Link to="/hop#hopanimations">
-                        Launch Commercials / Marketing Animations
-                      </Link>
-                      ,{" "}
-                      <Link to="/hop#hopanimations">
-                        Animated Hopster on Virtual Card
-                      </Link>
-                    </UnorderedListItem>
-                    <UnorderedListItem>
-                      <SpanDivider>Cascadia Threads</SpanDivider>{" "}
-                      <Link to="cascadiathreads/#animations">
-                        Marketing Animations
-                      </Link>
-                      ,{" "}
-                      <a
-                        href="https://instagram.com/cascadiathreads"
-                        target="_blank"
-                        alt="Instagram: @cascadiathreads"
-                        without
-                        rel="noopener noreferrer"
-                      >
-                        Apparel Photography
-                      </a>
-                    </UnorderedListItem>
-                    <UnorderedListItem>
-                      <SpanDivider>Older Work</SpanDivider>{" "}
-                      <a
-                        href="https://dribbble.com/shots/3202015-Rappers-Favorite-Website/attachments/3202015-Rappers-Favorite-Website?mode=media"
-                        target="_blank"
-                        alt="Dribbble Rappers Favorite Idea"
-                        without
-                        rel="noopener noreferrer"
-                      >
-                        Rappers Favorite
-                      </a>
-                    </UnorderedListItem>
-                  </UnorderedList>
-                </div>
+                        <span className={["bg-dark-black"].join(" ")}>
+                          👽 UI MOTION DESIGNER
+                        </span>
+                      </h5>
+                      <p className={["small"].join(" ")}></p>
+                      <UnorderedList>
+                        <UnorderedListItem>
+                          <SpanDivider>TriMet</SpanDivider>
+                          <Link to="/trimet#proofofconcept">
+                            Progressive Web App POC
+                          </Link>
+                          ,{" "}
+                          <a
+                            href="https://www.youtube.com/watch?v=Cld-NITIMwo"
+                            target="_blank"
+                            alt=""
+                            without="true"
+                            rel="noopener noreferrer"
+                          >
+                            SW Corridor Fly-though
+                          </a>
+                          /
+                          <a
+                            href="https://www.youtube.com/watch?v=fSDKlqbV_DI&list=PLtJW_Q-z9fw8Q2b5tdBReibFKAVfOJEy6&index=3"
+                            target="_blank"
+                            alt=""
+                            without="true"
+                            rel="noopener noreferrer"
+                          >
+                            New Service Fly-throughs Playlist
+                          </a>
+                          ,{" "}
+                          <a
+                            href="https://twitter.com/trimet/status/1316881653474578432"
+                            target="_blank"
+                            alt="Airflow on MAX"
+                            without="true"
+                            rel="noopener noreferrer"
+                          >
+                            Airflow on MAX
+                          </a>
+                          ,{" "}
+                          <Link to="/trimet-arrivals">
+                            Arrivals App Case Study
+                          </Link>
+                        </UnorderedListItem>
+                        <UnorderedListItem>
+                          <SpanDivider>Hop Fastpass</SpanDivider>{" "}
+                          <Link to="/hop#whatsmyfare">
+                            Ways to pay questionnaire
+                          </Link>
+                          ,{" "}
+                          <a
+                            href="https://myhopcard.com/home/"
+                            target="_blank"
+                            alt="Hop Fastpass"
+                            without="true"
+                            rel="noopener noreferrer"
+                          >
+                            Website Animations
+                          </a>
+                          ,{" "}
+                          <Link to="/hop#hopanimations">
+                            Launch Commercials / Marketing Animations
+                          </Link>
+                          ,{" "}
+                          <Link to="/hop#hopanimations">
+                            Animated Hopster on Virtual Card
+                          </Link>
+                        </UnorderedListItem>
+                        <UnorderedListItem>
+                          <SpanDivider>Cascadia Threads</SpanDivider>{" "}
+                          <Link to="cascadiathreads/#animations">
+                            Marketing Animations
+                          </Link>
+                          ,{" "}
+                          <a
+                            href="https://instagram.com/cascadiathreads"
+                            target="_blank"
+                            alt="Instagram: @cascadiathreads"
+                            without="true"
+                            rel="noopener noreferrer"
+                          >
+                            Apparel Photography
+                          </a>
+                        </UnorderedListItem>
+                        <UnorderedListItem>
+                          <SpanDivider>Older Work</SpanDivider>{" "}
+                          <a
+                            href="https://dribbble.com/shots/3202015-Rappers-Favorite-Website/attachments/3202015-Rappers-Favorite-Website?mode=media"
+                            target="_blank"
+                            alt="Dribbble Rappers Favorite Idea"
+                            without="true"
+                            rel="noopener noreferrer"
+                          >
+                            Rappers Favorite
+                          </a>
+                        </UnorderedListItem>
+                        <UnorderedListItem>
+                          <SpanDivider>On Deck</SpanDivider>{" "}
+                          <span className={["small"].join(" ")}>
+                            TriMet.org Re-architecture Project Case Study
+                          </span>
+                        </UnorderedListItem>
+                      </UnorderedList>
+                    </div>
+                  </div>
+                </Tilt>
               </div>
             </Col>
           </Row>

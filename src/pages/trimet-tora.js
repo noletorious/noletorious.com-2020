@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 import Layout from "../components/layout"
@@ -7,7 +7,6 @@ import Col from "react-bootstrap/Col"
 import Row from "react-bootstrap/Row"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import useDarkMode from "use-dark-mode"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faUsersCog,
@@ -19,11 +18,6 @@ import {
 import NextContentPage from "../components/NextContentPage"
 
 const TriMetTora = () => {
-  const darkMode = useDarkMode()
-  useEffect(() => {
-    darkMode.disable()
-  }, [])
-
   const data = useStaticQuery(graphql`
     query {
       arrivalsxd: file(

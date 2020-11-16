@@ -6,7 +6,6 @@ import Container from "react-bootstrap/Container"
 import Col from "react-bootstrap/Col"
 import Row from "react-bootstrap/Row"
 import styled from "styled-components"
-import useDarkMode from "use-dark-mode"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faUsersCog,
@@ -16,18 +15,20 @@ import {
   faExternalLinkAlt,
 } from "@fortawesome/free-solid-svg-icons"
 import NextContentPage from "../components/NextContentPage"
-
 import toggleFavoritesMp4 from "../images/arrivals/toggle-favorites.mp4"
 import LRFSTVMp4 from "../images/arrivals/LRFSTV.mp4"
 import TVDMMp4 from "../images/arrivals/TVDM.mp4"
 import toggleFavoritesWebm from "../images/arrivals/toggle-favorites.webm"
 import LRFSTVWebm from "../images/arrivals/LRFSTV.webm"
 import TVDMWebm from "../images/arrivals/TVDM.webm"
+import useDarkMode from "use-dark-mode"
 
 const TriMetArrivals = () => {
   const darkMode = useDarkMode()
   useEffect(() => {
-    darkMode.disable()
+    return darkMode.value
+      ? darkMode.disable()
+      : console.log("Should be light: " + darkMode.value)
   }, [])
   const data = useStaticQuery(graphql`
     query {
