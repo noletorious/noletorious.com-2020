@@ -172,5 +172,11 @@ input[type="checkbox"].dmcheck {
 }
 
 .shadow {
-  drop-shadow: 0 0 0 rgba(0, 0, 0, 1);
+  box-shadow: 0 0 0 rgb(0, 0, 0, 0.1) !important;
+  transition: box-shadow 1.5s ease;
+}
+
+.shadow:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4) !important;
+  transition: box-shadow 0.55s linear;
 }
