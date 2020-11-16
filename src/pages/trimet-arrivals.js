@@ -26,9 +26,7 @@ import useDarkMode from "use-dark-mode"
 const TriMetArrivals = () => {
   const darkMode = useDarkMode()
   useEffect(() => {
-    return darkMode.value
-      ? darkMode.disable()
-      : console.log("Should be light: " + darkMode.value)
+    return darkMode.value ? darkMode.disable() : null
   }, [])
   const data = useStaticQuery(graphql`
     query {
