@@ -239,9 +239,14 @@ const AdidasPage = () => {
                         </UnorderedListItem>
                         <UnorderedListItem>
                           <SpanDivider>On Deck</SpanDivider>{" "}
-                          <span className={["small"].join(" ")}>
-                            TriMet.org Re-architecture Project Case Study
-                          </span>
+                          <p
+                            className={["small", "mt-1"].join(" ")}
+                            style={{ opacity: 0.5, lineHeight: 0 }}
+                          >
+                            TriMet.org Re-architecture Project Case Study,
+                            What's my Fare Questionnaire Process, Airflow on MAX
+                            Production Process, and more.
+                          </p>
                         </UnorderedListItem>
                       </UnorderedList>
                     </div>
