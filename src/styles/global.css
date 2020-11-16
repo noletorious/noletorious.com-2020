@@ -170,3 +170,7 @@ input[type="checkbox"].dmcheck {
   color: #fff;
   padding: 0 5px;
 }
+
+.shadow {
+  drop-shadow: 0 0 0 rgba(0, 0, 0, 1);
+}

@@ -131,6 +131,7 @@ const AdidasPage = () => {
                         "flex-column",
                         "px-3",
                         "bg-whiteblack",
+                        "shadow",
                       ].join(" ")}
                     >
                       <h5
