@@ -22,9 +22,7 @@ const NoelImageWrap = styled.div`
 const IndexPage = () => {
   const darkMode = useDarkMode()
   useEffect(() => {
-    return !darkMode.value
-      ? darkMode.enable()
-      : console.log("Should be dark: " + darkMode.value)
+    return !darkMode.value ? darkMode.enable() : undefined
   }, [])
 
   const data = useStaticQuery(graphql`

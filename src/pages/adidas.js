@@ -13,9 +13,7 @@ import Tilt from "react-tilt"
 const AdidasPage = () => {
   const darkMode = useDarkMode()
   useEffect(() => {
-    return !darkMode.value
-      ? darkMode.enable()
-      : console.log("Should be dark: " + darkMode.value)
+    return !darkMode.value ? darkMode.enable() : undefined
   }, [])
   const GradientContainer = styled.div`
     background: linear-gradient(-45deg, #9359ff, #fffc59, #23a6d5, #23d5ab);
