@@ -143,7 +143,8 @@ const About = () => {
                   <li>
                     <h5>Development</h5>
                     <p className={["small", "mb-3", "text-muted"].join(" ")}>
-                      Git, Reactjs, VSCode, Android Studio
+                      Git, Gitlab, Confluence, Jira, Reactjs, VSCode, Android
+                      Studio
                     </p>
                   </li>
                   <li>
