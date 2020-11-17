@@ -112,7 +112,9 @@ const AdidasPage = () => {
                 ].join(" ")}
               >
                 {/* Without Tilt */}
-                <div className={["Tilt", "d-block", "d-sm-none"].join(" ")}>
+                <div
+                  className={["Tilt", "d-block", "d-sm-none", "mb-5"].join(" ")}
+                >
                   <div
                     className={[
                       "d-flex",
@@ -127,7 +129,10 @@ const AdidasPage = () => {
                       style={{ marginTop: "-8px" }}
                     >
                       <span className={["bg-dark-black"].join(" ")}>
-                        <span role="img" aria-label>
+                        <span
+                          role="img"
+                          aria-label="Out of this world UI Motion Designer"
+                        >
                           👽
                         </span>{" "}
                         UI MOTION DESIGNER
@@ -272,7 +277,7 @@ const AdidasPage = () => {
                         style={{ marginTop: "-8px" }}
                       >
                         <span className={["bg-dark-black"].join(" ")}>
-                          <span role="img" aria-label>
+                          <span role="img" aria-label="UI Motion Designer">
                             👽
                           </span>{" "}
                           UI MOTION DESIGNER
