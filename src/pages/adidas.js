@@ -94,6 +94,7 @@ const AdidasPage = () => {
                 </div>
               </div>
             </Col>
+
             <Col
               xs={{ span: 12 }}
               sm={{ span: 5 }}
@@ -110,14 +111,146 @@ const AdidasPage = () => {
                   "justify-content-sm-start",
                 ].join(" ")}
               >
+                {/* Without Tilt */}
+                <div className={["Tilt", "d-block", "d-sm-none"].join(" ")}>
+                  <div
+                    className={[
+                      "d-flex",
+                      "flex-column",
+                      "px-3",
+                      "bg-whiteblack",
+                      "shadow",
+                    ].join(" ")}
+                  >
+                    <h5
+                      className={["text-center", "small"].join(" ")}
+                      style={{ marginTop: "-8px" }}
+                    >
+                      <span className={["bg-dark-black"].join(" ")}>
+                        <span role="img" aria-label>
+                          👽
+                        </span>{" "}
+                        UI MOTION DESIGNER
+                      </span>
+                    </h5>
+                    <p className={["small"].join(" ")}></p>
+                    <UnorderedList>
+                      <UnorderedListItem>
+                        <SpanDivider>TriMet</SpanDivider>
+                        <Link to="/trimet#proofofconcept">
+                          Progressive Web App POC
+                        </Link>
+                        ,{" "}
+                        <a
+                          href="https://www.youtube.com/watch?v=Cld-NITIMwo"
+                          target="_blank"
+                          alt=""
+                          without="true"
+                          rel="noopener noreferrer"
+                        >
+                          SW Corridor Fly-though
+                        </a>
+                        /
+                        <a
+                          href="https://www.youtube.com/watch?v=fSDKlqbV_DI&list=PLtJW_Q-z9fw8Q2b5tdBReibFKAVfOJEy6&index=3"
+                          target="_blank"
+                          alt=""
+                          without="true"
+                          rel="noopener noreferrer"
+                        >
+                          New Service Fly-throughs Playlist
+                        </a>
+                        ,{" "}
+                        <a
+                          href="https://twitter.com/trimet/status/1316881653474578432"
+                          target="_blank"
+                          alt="Airflow on MAX"
+                          without="true"
+                          rel="noopener noreferrer"
+                        >
+                          Airflow on MAX
+                        </a>
+                        ,{" "}
+                        <Link to="/trimet-arrivals">
+                          Arrivals App Case Study
+                        </Link>
+                      </UnorderedListItem>
+                      <UnorderedListItem>
+                        <SpanDivider>Hop Fastpass</SpanDivider>{" "}
+                        <Link to="/hop#whatsmyfare">
+                          Ways to pay questionnaire
+                        </Link>
+                        ,{" "}
+                        <a
+                          href="https://myhopcard.com/home/"
+                          target="_blank"
+                          alt="Hop Fastpass"
+                          without="true"
+                          rel="noopener noreferrer"
+                        >
+                          Website Animations
+                        </a>
+                        ,{" "}
+                        <Link to="/hop#hopanimations">
+                          Launch Commercials / Marketing Animations
+                        </Link>
+                        ,{" "}
+                        <Link to="/hop#hopanimations">
+                          Animated Hopster on Virtual Card
+                        </Link>
+                      </UnorderedListItem>
+                      <UnorderedListItem>
+                        <SpanDivider>Cascadia Threads</SpanDivider>{" "}
+                        <Link to="cascadiathreads/#animations">
+                          Marketing Animations
+                        </Link>
+                        ,{" "}
+                        <a
+                          href="https://instagram.com/cascadiathreads"
+                          target="_blank"
+                          alt="Instagram: @cascadiathreads"
+                          without="true"
+                          rel="noopener noreferrer"
+                        >
+                          Apparel Photography
+                        </a>
+                      </UnorderedListItem>
+                      <UnorderedListItem>
+                        <SpanDivider>Older Work</SpanDivider>{" "}
+                        <a
+                          href="https://dribbble.com/shots/3202015-Rappers-Favorite-Website/attachments/3202015-Rappers-Favorite-Website?mode=media"
+                          target="_blank"
+                          alt="Dribbble Rappers Favorite Idea"
+                          without="true"
+                          rel="noopener noreferrer"
+                        >
+                          Rappers Favorite
+                        </a>
+                      </UnorderedListItem>
+                      <UnorderedListItem>
+                        <SpanDivider>On Deck</SpanDivider>{" "}
+                        <p
+                          className={["small", "mt-1"].join(" ")}
+                          style={{ opacity: 0.5, lineHeight: 0 }}
+                        >
+                          TriMet.org Re-architecture Project Case Study, What's
+                          my Fare Questionnaire Process, Airflow on MAX
+                          Production Process, and more.
+                        </p>
+                      </UnorderedListItem>
+                    </UnorderedList>
+                  </div>
+                </div>
+
+                {/* With Tilt */}
                 <Tilt
-                  className="Tilt"
+                  className={["Tilt", "d-none", "d-sm-block"].join(" ")}
                   options={{
                     reverse: false, // reverse the tilt direction
                     max: 35, // max tilt rotation (degrees)
                     perspective: 1000, // Transform perspective, the lower the more extreme the tilt gets.
                     scale: 1.1, // 2 = 200%, 1.5 = 150%, etc..
-                    speed: 1000, // Speed of the enter/exit transition
+                    speed: 1500, // Speed of the enter/exit transition
                     transition: true, // Set a transition on enter/exit.
                     axis: null, // What axis should be disabled. Can be X or Y.
                     reset: true, // If the tilt effect has to be reset on exit.

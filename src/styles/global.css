@@ -180,3 +180,8 @@ input[type="checkbox"].dmcheck {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4) !important;
   transition: box-shadow 0.55s linear;
 }
+
+@media only screen and (min-width: 576px) {
+  .Tilt {
+  }
+}
