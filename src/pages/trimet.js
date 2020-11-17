@@ -26,7 +26,7 @@ const TriMet = () => {
   const darkMode = useDarkMode()
   useEffect(() => {
     return darkMode.value ? darkMode.disable() : undefined
-  })
+  }, [])
 
   const data = useStaticQuery(graphql`
     query {
