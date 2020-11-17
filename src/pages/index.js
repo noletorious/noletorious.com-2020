@@ -12,11 +12,13 @@ import Row from "react-bootstrap/Row"
 import Scrollchor from "react-scrollchor"
 import useDarkMode from "use-dark-mode"
 import ReusableCard from "../components/ReuseableCard"
+import Tilt from "react-tilt"
 
 const NoelImageWrap = styled.div`
   max-width: 125px;
   width: 125px;
   margin: 2em auto;
+  }
 `
 
 const IndexPage = () => {
@@ -127,7 +129,7 @@ const IndexPage = () => {
               <Link to="/about">
                 <Img
                   fluid={data.noelFront.childImageSharp.fluid}
-                  className="rounded-circle"
+                  className={["accent-border", "rounded-circle"].join(" ")}
                 />
               </Link>
             </NoelImageWrap>
@@ -153,32 +155,48 @@ const IndexPage = () => {
         </Row>
         <Row>
           <Col xs={{ span: 6 }} md={{ span: 3 }} className="mb-4">
-            <ReusableCard
-              title={trimet.title}
-              imgSrc={trimet.imgSrc}
-              link={trimet.link}
-            />
+            <Tilt>
+              <div className="tiltinner">
+                <ReusableCard
+                  title={trimet.title}
+                  imgSrc={trimet.imgSrc}
+                  link={trimet.link}
+                />
+              </div>
+            </Tilt>
           </Col>
           <Col xs={{ span: 6 }} md={{ span: 3 }}>
-            <ReusableCard
-              title={hop.title}
-              imgSrc={hop.imgSrc}
-              link={hop.link}
-            />
+            <Tilt>
+              <div className="tiltinner">
+                <ReusableCard
+                  title={hop.title}
+                  imgSrc={hop.imgSrc}
+                  link={hop.link}
+                />
+              </div>
+            </Tilt>
           </Col>
           <Col xs={{ span: 6 }} md={{ span: 3 }}>
-            <ReusableCard
-              title={attensa.title}
-              imgSrc={attensa.imgSrc}
-              link={attensa.link}
-            />
+            <Tilt>
+              <div className="tiltinner">
+                <ReusableCard
+                  title={attensa.title}
+                  imgSrc={attensa.imgSrc}
+                  link={attensa.link}
+                />
+              </div>
+            </Tilt>
           </Col>
           <Col xs={{ span: 6 }} md={{ span: 3 }} className="mb-4">
-            <ReusableCard
-              title={cascadiathreads.title}
-              imgSrc={cascadiathreads.imgSrc}
-              link={cascadiathreads.link}
-            />
+            <Tilt>
+              <div className="tiltinner">
+                <ReusableCard
+                  title={cascadiathreads.title}
+                  imgSrc={cascadiathreads.imgSrc}
+                  link={cascadiathreads.link}
+                />
+              </div>
+            </Tilt>
           </Col>
         </Row>
       </Container>

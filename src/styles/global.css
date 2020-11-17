@@ -57,6 +57,14 @@ button.impact-link:active {
   transition: color 0.4s ease;
   border-bottom: dotted 1px #ff657c;
 }
+.content .accent-border {
+  border: 1px solid transparent;
+  transition: border 0.4s ease;
+}
+.content .accent-border:hover {
+  border: 1px solid #ff657c;
+  transition: border 0.4s ease;
+}
 .content a:hover,
 .content .impact-link:hover {
   text-decoration: none;
@@ -71,6 +79,14 @@ body.dark-mode .content .impact-link {
   color: #b6fff4 !important;
   transition: color 0.4s ease;
   border-bottom: dotted 1px #b6fff4;
+}
+body.dark-mode .content .accent-border {
+  border: 1px solid transparent;
+  transition: border 0.4s ease;
+}
+body.dark-mode .content .accent-border:hover {
+  border: 1px solid #b6fff4;
+  transition: border 0.4s ease;
 }
 body.dark-mode .content a:hover,
 body.dark-mode .content .impact-link:hover {
