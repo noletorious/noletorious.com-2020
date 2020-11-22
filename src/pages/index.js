@@ -100,7 +100,7 @@ const IndexPage = () => {
   // const theThemeState = useTheme()
   return (
     <Layout>
-      <SEO title="Portfolio" image={socialImageShare} />
+      <SEO title="Portfolio - Noel Torres" image={socialImageShare} />
       <Container>
         <Row>
           <Col>

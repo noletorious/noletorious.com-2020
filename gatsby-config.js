@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Noel Torres`,
-    description: `Interaction Designer`,
+    description: `UI/Motion Designer`,
     author: `@noletorious`,
   },
   plugins: [
