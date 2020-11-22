@@ -72,7 +72,7 @@ function SEO({ description, lang, meta, title, image }) {
       />
       <meta name="image" content={image} />
       <meta property="og:image" content={image} />
-      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:card" content={metaDescription} />
       <meta name="twitter:image" content={image} />
     </>
   )

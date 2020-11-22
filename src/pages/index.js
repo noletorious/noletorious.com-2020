@@ -97,7 +97,6 @@ const IndexPage = () => {
     link: "/hop",
   }
 
-  // const theThemeState = useTheme()
   return (
     <Layout>
       <SEO title="Portfolio - Noel Torres" image={socialImageShare} />
