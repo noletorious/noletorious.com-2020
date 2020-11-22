@@ -64,25 +64,7 @@ const IndexPage = () => {
           }
         }
       }
-      trimetArrivals: file(
-        relativePath: { eq: "personal/trimetArrivals-front.jpg" }
-      ) {
-        childImageSharp {
-          original {
-            src
-          }
-        }
-      }
-      heyyy: file(relativePath: { eq: "personal/heyyy-front.jpg" }) {
-        childImageSharp {
-          original {
-            src
-          }
-        }
-      }
-      gMapsRedesign: file(
-        relativePath: { eq: "personal/googleMapsRedesign.jpg" }
-      ) {
+      socialImageShare: file(relativePath: { eq: "hop-googleVC.gif" }) {
         childImageSharp {
           original {
             src
@@ -92,6 +74,7 @@ const IndexPage = () => {
     }
   `)
 
+  const socialImageShare = data.trimet.childImageSharp.original.src
   const trimetImage = data.trimet.childImageSharp.original.src
   const attensaImage = data.attensa.childImageSharp.original.src
   const cascadiaThreadsImage = data.cascadiathreads.childImageSharp.original.src
@@ -121,7 +104,7 @@ const IndexPage = () => {
   // const theThemeState = useTheme()
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Portfolio" image={socialImageShare} />
       <Container>
         <Row>
           <Col>
