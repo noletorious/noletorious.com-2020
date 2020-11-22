@@ -70,7 +70,7 @@ const IndexPage = () => {
     }
   `)
 
-  const socialImageShare = data.socialImageShare.file.publicURL
+  const socialImageShare = data.socialImageShare.publicURL
   const trimetImage = data.trimet.childImageSharp.original.src
   const attensaImage = data.attensa.childImageSharp.original.src
   const cascadiaThreadsImage = data.cascadiathreads.childImageSharp.original.src
