@@ -65,16 +65,12 @@ const IndexPage = () => {
         }
       }
       socialImageShare: file(relativePath: { eq: "hop-googleVC.gif" }) {
-        childImageSharp {
-          original {
-            src
-          }
-        }
+        publicURL
       }
     }
   `)
 
-  const socialImageShare = data.trimet.childImageSharp.original.src
+  const socialImageShare = data.socialImageShare.file.publicURL
   const trimetImage = data.trimet.childImageSharp.original.src
   const attensaImage = data.attensa.childImageSharp.original.src
   const cascadiaThreadsImage = data.cascadiathreads.childImageSharp.original.src
